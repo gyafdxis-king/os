@@ -1,0 +1,42 @@
+[
+{
+  "directory": "/Users/gaolisha/workspace/diy-x86os-master/start/start/build",
+  "command": "/usr/local/bin/x86_64-elf-gcc -I/Users/gaolisha/workspace/diy-x86os-master/start/start/source -I/Users/gaolisha/workspace/diy-x86os-master/start/start/source/kernel/include -m32 -g -g -o source/boot/CMakeFiles/boot.dir/start.S.o -c /Users/gaolisha/workspace/diy-x86os-master/start/start/source/boot/start.S",
+  "file": "/Users/gaolisha/workspace/diy-x86os-master/start/start/source/boot/start.S"
+},
+{
+  "directory": "/Users/gaolisha/workspace/diy-x86os-master/start/start/build",
+  "command": "/usr/local/bin/x86_64-elf-gcc -I/Users/gaolisha/workspace/diy-x86os-master/start/start/source -I/Users/gaolisha/workspace/diy-x86os-master/start/start/source/kernel/include -g -c -O0 -m32 -fno-pie -fno-stack-protector -fno-asynchronous-unwind-tables -g -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX11.1.sdk -o source/boot/CMakeFiles/boot.dir/boot.c.o -c /Users/gaolisha/workspace/diy-x86os-master/start/start/source/boot/boot.c",
+  "file": "/Users/gaolisha/workspace/diy-x86os-master/start/start/source/boot/boot.c"
+},
+{
+  "directory": "/Users/gaolisha/workspace/diy-x86os-master/start/start/build",
+  "command": "/usr/local/bin/x86_64-elf-gcc -I/Users/gaolisha/workspace/diy-x86os-master/start/start/source -I/Users/gaolisha/workspace/diy-x86os-master/start/start/source/kernel/include -m32 -g -g -o source/loader/CMakeFiles/loader.dir/start.S.o -c /Users/gaolisha/workspace/diy-x86os-master/start/start/source/loader/start.S",
+  "file": "/Users/gaolisha/workspace/diy-x86os-master/start/start/source/loader/start.S"
+},
+{
+  "directory": "/Users/gaolisha/workspace/diy-x86os-master/start/start/build",
+  "command": "/usr/local/bin/x86_64-elf-gcc -I/Users/gaolisha/workspace/diy-x86os-master/start/start/source -I/Users/gaolisha/workspace/diy-x86os-master/start/start/source/kernel/include -g -c -O0 -m32 -fno-pie -fno-stack-protector -fno-asynchronous-unwind-tables -g -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX11.1.sdk -o source/loader/CMakeFiles/loader.dir/loader_16.c.o -c /Users/gaolisha/workspace/diy-x86os-master/start/start/source/loader/loader_16.c",
+  "file": "/Users/gaolisha/workspace/diy-x86os-master/start/start/source/loader/loader_16.c"
+},
+{
+  "directory": "/Users/gaolisha/workspace/diy-x86os-master/start/start/build",
+  "command": "/usr/local/bin/x86_64-elf-gcc -I/Users/gaolisha/workspace/diy-x86os-master/start/start/source -I/Users/gaolisha/workspace/diy-x86os-master/start/start/source/kernel/include -g -c -O0 -m32 -fno-pie -fno-stack-protector -fno-asynchronous-unwind-tables -g -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX11.1.sdk -o source/loader/CMakeFiles/loader.dir/loader_32.c.o -c /Users/gaolisha/workspace/diy-x86os-master/start/start/source/loader/loader_32.c",
+  "file": "/Users/gaolisha/workspace/diy-x86os-master/start/start/source/loader/loader_32.c"
+},
+{
+  "directory": "/Users/gaolisha/workspace/diy-x86os-master/start/start/build",
+  "command": "/usr/local/bin/x86_64-elf-gcc -I/Users/gaolisha/workspace/diy-x86os-master/start/start/source -I/Users/gaolisha/workspace/diy-x86os-master/start/start/source/kernel/include -m32 -g -g -o source/kernel/CMakeFiles/kernel.dir/init/start.S.o -c /Users/gaolisha/workspace/diy-x86os-master/start/start/source/kernel/init/start.S",
+  "file": "/Users/gaolisha/workspace/diy-x86os-master/start/start/source/kernel/init/start.S"
+},
+{
+  "directory": "/Users/gaolisha/workspace/diy-x86os-master/start/start/build",
+  "command": "/usr/local/bin/x86_64-elf-gcc -I/Users/gaolisha/workspace/diy-x86os-master/start/start/source -I/Users/gaolisha/workspace/diy-x86os-master/start/start/source/kernel/include -g -c -O0 -m32 -fno-pie -fno-stack-protector -fno-asynchronous-unwind-tables -g -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX11.1.sdk -o source/kernel/CMakeFiles/kernel.dir/cpu/cpu.c.o -c /Users/gaolisha/workspace/diy-x86os-master/start/start/source/kernel/cpu/cpu.c",
+  "file": "/Users/gaolisha/workspace/diy-x86os-master/start/start/source/kernel/cpu/cpu.c"
+},
+{
+  "directory": "/Users/gaolisha/workspace/diy-x86os-master/start/start/build",
+  "command": "/usr/local/bin/x86_64-elf-gcc -I/Users/gaolisha/workspace/diy-x86os-master/start/start/source -I/Users/gaolisha/workspace/diy-x86os-master/start/start/source/kernel/include -g -c -O0 -m32 -fno-pie -fno-stack-protector -fno-asynchronous-unwind-tables -g -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX11.1.sdk -o source/kernel/CMakeFiles/kernel.dir/init/init.c.o -c /Users/gaolisha/workspace/diy-x86os-master/start/start/source/kernel/init/init.c",
+  "file": "/Users/gaolisha/workspace/diy-x86os-master/start/start/source/kernel/init/init.c"
+}
+]
