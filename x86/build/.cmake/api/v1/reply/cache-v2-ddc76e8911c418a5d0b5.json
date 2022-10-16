@@ -34,22 +34,6 @@
 			"value" : "/usr/local/bin/x86_64-elf-ar"
 		},
 		{
-			"name" : "CMAKE_ASM_COMPILER",
-			"properties" : 
-			[
-				{
-					"name" : "ADVANCED",
-					"value" : "1"
-				},
-				{
-					"name" : "HELPSTRING",
-					"value" : "(This variable does not exist and should not be used)"
-				}
-			],
-			"type" : "UNINITIALIZED",
-			"value" : ""
-		},
-		{
 			"name" : "CMAKE_ASM_COMPILER_AR",
 			"properties" : 
 			[
@@ -195,7 +179,7 @@
 				}
 			],
 			"type" : "INTERNAL",
-			"value" : "/Users/gaolisha/workspace/diy-x86os-master/start/start/build"
+			"value" : "/Users/gaolisha/workspace/os/x86/build"
 		},
 		{
 			"name" : "CMAKE_CACHE_MAJOR_VERSION",
@@ -291,10 +275,10 @@
 				},
 				{
 					"name" : "HELPSTRING",
-					"value" : "C compiler"
+					"value" : "No help, variable specified on the command line."
 				}
 			],
-			"type" : "STRING",
+			"type" : "FILEPATH",
 			"value" : "/usr/local/bin/x86_64-elf-gcc"
 		},
 		{
@@ -563,7 +547,7 @@
 				}
 			],
 			"type" : "STATIC",
-			"value" : "/Users/gaolisha/workspace/diy-x86os-master/start/start/build/CMakeFiles/pkgRedirects"
+			"value" : "/Users/gaolisha/workspace/os/x86/build/CMakeFiles/pkgRedirects"
 		},
 		{
 			"name" : "CMAKE_GENERATOR",
@@ -623,7 +607,7 @@
 				}
 			],
 			"type" : "INTERNAL",
-			"value" : "/Users/gaolisha/workspace/diy-x86os-master/start/start"
+			"value" : "/Users/gaolisha/workspace/os/x86"
 		},
 		{
 			"name" : "CMAKE_INSTALL_NAME_TOOL",
@@ -1199,7 +1183,7 @@
 				}
 			],
 			"type" : "STATIC",
-			"value" : "/Users/gaolisha/workspace/diy-x86os-master/start/start/build/source/boot"
+			"value" : "/Users/gaolisha/workspace/os/x86/build/source/boot"
 		},
 		{
 			"name" : "boot_IS_TOP_LEVEL",
@@ -1223,7 +1207,7 @@
 				}
 			],
 			"type" : "STATIC",
-			"value" : "/Users/gaolisha/workspace/diy-x86os-master/start/start/source/boot"
+			"value" : "/Users/gaolisha/workspace/os/x86/source/boot"
 		},
 		{
 			"name" : "kernel_BINARY_DIR",
@@ -1235,7 +1219,7 @@
 				}
 			],
 			"type" : "STATIC",
-			"value" : "/Users/gaolisha/workspace/diy-x86os-master/start/start/build/source/kernel"
+			"value" : "/Users/gaolisha/workspace/os/x86/build/source/kernel"
 		},
 		{
 			"name" : "kernel_IS_TOP_LEVEL",
@@ -1259,7 +1243,7 @@
 				}
 			],
 			"type" : "STATIC",
-			"value" : "/Users/gaolisha/workspace/diy-x86os-master/start/start/source/kernel"
+			"value" : "/Users/gaolisha/workspace/os/x86/source/kernel"
 		},
 		{
 			"name" : "loader_BINARY_DIR",
@@ -1271,7 +1255,7 @@
 				}
 			],
 			"type" : "STATIC",
-			"value" : "/Users/gaolisha/workspace/diy-x86os-master/start/start/build/source/loader"
+			"value" : "/Users/gaolisha/workspace/os/x86/build/source/loader"
 		},
 		{
 			"name" : "loader_IS_TOP_LEVEL",
@@ -1295,7 +1279,7 @@
 				}
 			],
 			"type" : "STATIC",
-			"value" : "/Users/gaolisha/workspace/diy-x86os-master/start/start/source/loader"
+			"value" : "/Users/gaolisha/workspace/os/x86/source/loader"
 		},
 		{
 			"name" : "os_BINARY_DIR",
@@ -1307,7 +1291,7 @@
 				}
 			],
 			"type" : "STATIC",
-			"value" : "/Users/gaolisha/workspace/diy-x86os-master/start/start/build"
+			"value" : "/Users/gaolisha/workspace/os/x86/build"
 		},
 		{
 			"name" : "os_IS_TOP_LEVEL",
@@ -1331,7 +1315,7 @@
 				}
 			],
 			"type" : "STATIC",
-			"value" : "/Users/gaolisha/workspace/diy-x86os-master/start/start"
+			"value" : "/Users/gaolisha/workspace/os/x86"
 		}
 	],
 	"kind" : "cache",

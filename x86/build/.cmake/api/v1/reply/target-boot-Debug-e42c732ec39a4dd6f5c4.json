@@ -53,11 +53,11 @@
 			[
 				{
 					"backtrace" : 3,
-					"path" : "/Users/gaolisha/workspace/diy-x86os-master/start/start/source"
+					"path" : "/Users/gaolisha/workspace/os/x86/source"
 				},
 				{
 					"backtrace" : 3,
-					"path" : "/Users/gaolisha/workspace/diy-x86os-master/start/start/source/kernel/include"
+					"path" : "/Users/gaolisha/workspace/os/x86/source/kernel/include"
 				}
 			],
 			"language" : "ASM",
@@ -77,11 +77,11 @@
 			[
 				{
 					"backtrace" : 3,
-					"path" : "/Users/gaolisha/workspace/diy-x86os-master/start/start/source"
+					"path" : "/Users/gaolisha/workspace/os/x86/source"
 				},
 				{
 					"backtrace" : 3,
-					"path" : "/Users/gaolisha/workspace/diy-x86os-master/start/start/source/kernel/include"
+					"path" : "/Users/gaolisha/workspace/os/x86/source/kernel/include"
 				}
 			],
 			"language" : "C",

@@ -1,6 +1,6 @@
 
-/Users/gaolisha/workspace/diy-x86os-master/start/start/build/source/kernel/kernel.elf:     file format elf32-i386
-/Users/gaolisha/workspace/diy-x86os-master/start/start/build/source/kernel/kernel.elf
+/Users/gaolisha/workspace/os/x86/build/source/kernel/kernel.elf:     file format elf32-i386
+/Users/gaolisha/workspace/os/x86/build/source/kernel/kernel.elf
 architecture: i386, flags 0x00000112:
 EXEC_P, HAS_SYMS, D_PAGED
 start address 0x00010000
@@ -17,19 +17,19 @@ Idx Name          Size      VMA       LMA       File off  Algn
                   ALLOC
   2 .debug_line   0000016a  00000000  00000000  000010c9  2**0
                   CONTENTS, READONLY, DEBUGGING, OCTETS
-  3 .debug_line_str 00000226  00000000  00000000  00001233  2**0
+  3 .debug_line_str 0000018c  00000000  00000000  00001233  2**0
                   CONTENTS, READONLY, DEBUGGING, OCTETS
-  4 .debug_info   00000296  00000000  00000000  00001459  2**0
+  4 .debug_info   00000296  00000000  00000000  000013bf  2**0
                   CONTENTS, READONLY, DEBUGGING, OCTETS
-  5 .debug_abbrev 000001de  00000000  00000000  000016ef  2**0
+  5 .debug_abbrev 000001de  00000000  00000000  00001655  2**0
                   CONTENTS, READONLY, DEBUGGING, OCTETS
-  6 .debug_aranges 00000060  00000000  00000000  000018d0  2**3
+  6 .debug_aranges 00000060  00000000  00000000  00001838  2**3
                   CONTENTS, READONLY, DEBUGGING, OCTETS
-  7 .debug_str    00000231  00000000  00000000  00001930  2**0
+  7 .debug_str    00000205  00000000  00000000  00001898  2**0
                   CONTENTS, READONLY, DEBUGGING, OCTETS
-  8 .comment      00000012  00000000  00000000  00001b61  2**0
+  8 .comment      00000012  00000000  00000000  00001a9d  2**0
                   CONTENTS, READONLY
-  9 .debug_frame  000000a0  00000000  00000000  00001b74  2**2
+  9 .debug_frame  000000a0  00000000  00000000  00001ab0  2**2
                   CONTENTS, READONLY, DEBUGGING, OCTETS
 SYMBOL TABLE:
 00000000 l    df *ABS*	00000000 cpu.c

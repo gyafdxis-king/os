@@ -124,21 +124,21 @@
 				{
 					"directoryIndex" : 1,
 					"id" : "boot::@a4fbfdde3044a49ad01d",
-					"jsonFile" : "target-boot-Debug-3ad2db2a10d0a0a9bab1.json",
+					"jsonFile" : "target-boot-Debug-e42c732ec39a4dd6f5c4.json",
 					"name" : "boot",
 					"projectIndex" : 1
 				},
 				{
 					"directoryIndex" : 3,
 					"id" : "kernel::@483af936ae9a949d521e",
-					"jsonFile" : "target-kernel-Debug-e396e492c35b9cd24d3f.json",
+					"jsonFile" : "target-kernel-Debug-aafccffbbddff624d91b.json",
 					"name" : "kernel",
 					"projectIndex" : 3
 				},
 				{
 					"directoryIndex" : 2,
 					"id" : "loader::@346703cd72729101d3c6",
-					"jsonFile" : "target-loader-Debug-3fd1d051ea41dd64cdad.json",
+					"jsonFile" : "target-loader-Debug-c370ed4976b016e3ab07.json",
 					"name" : "loader",
 					"projectIndex" : 2
 				}
@@ -148,8 +148,8 @@
 	"kind" : "codemodel",
 	"paths" : 
 	{
-		"build" : "/Users/gaolisha/workspace/diy-x86os-master/start/start/build",
-		"source" : "/Users/gaolisha/workspace/diy-x86os-master/start/start"
+		"build" : "/Users/gaolisha/workspace/os/x86/build",
+		"source" : "/Users/gaolisha/workspace/os/x86"
 	},
 	"version" : 
 	{

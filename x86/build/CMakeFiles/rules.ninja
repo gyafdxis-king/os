@@ -43,7 +43,7 @@ rule C_COMPILER__boot_Debug
 # Rule for linking C executable.
 
 rule C_EXECUTABLE_LINKER__boot_Debug
-  command = $PRE_LINK && x86_64-elf-ld $in -m elf_i386  -Ttext=0x7c00  --section-start boot_end=0x7dfe -o /Users/gaolisha/workspace/diy-x86os-master/start/start/build/source/boot/boot.elf && $POST_BUILD
+  command = $PRE_LINK && x86_64-elf-ld $in -m elf_i386  -Ttext=0x7c00  --section-start boot_end=0x7dfe -o /Users/gaolisha/workspace/os/x86/build/source/boot/boot.elf && $POST_BUILD
   description = Linking C executable $TARGET_FILE
   restat = $RESTAT
 
@@ -72,7 +72,7 @@ rule C_COMPILER__loader_Debug
 # Rule for linking C executable.
 
 rule C_EXECUTABLE_LINKER__loader_Debug
-  command = $PRE_LINK && x86_64-elf-ld $in -m elf_i386 -Ttext=0x8000 -o /Users/gaolisha/workspace/diy-x86os-master/start/start/build/source/loader/loader.elf && $POST_BUILD
+  command = $PRE_LINK && x86_64-elf-ld $in -m elf_i386 -Ttext=0x8000 -o /Users/gaolisha/workspace/os/x86/build/source/loader/loader.elf && $POST_BUILD
   description = Linking C executable $TARGET_FILE
   restat = $RESTAT
 
@@ -101,7 +101,7 @@ rule C_COMPILER__kernel_Debug
 # Rule for linking C executable.
 
 rule C_EXECUTABLE_LINKER__kernel_Debug
-  command = $PRE_LINK && x86_64-elf-ld $in -m elf_i386 -T /Users/gaolisha/workspace/diy-x86os-master/start/start/source/kernel/kernel.lds -o /Users/gaolisha/workspace/diy-x86os-master/start/start/build/source/kernel/kernel.elf && $POST_BUILD
+  command = $PRE_LINK && x86_64-elf-ld $in -m elf_i386 -T /Users/gaolisha/workspace/os/x86/source/kernel/kernel.lds -o /Users/gaolisha/workspace/os/x86/build/source/kernel/kernel.elf && $POST_BUILD
   description = Linking C executable $TARGET_FILE
   restat = $RESTAT
 
@@ -110,7 +110,7 @@ rule C_EXECUTABLE_LINKER__kernel_Debug
 # Rule for re-running cmake.
 
 rule RERUN_CMAKE
-  command = /usr/local/Cellar/cmake/3.24.2/bin/cmake --regenerate-during-build -S/Users/gaolisha/workspace/diy-x86os-master/start/start -B/Users/gaolisha/workspace/diy-x86os-master/start/start/build
+  command = /usr/local/Cellar/cmake/3.24.2/bin/cmake --regenerate-during-build -S/Users/gaolisha/workspace/os/x86 -B/Users/gaolisha/workspace/os/x86/build
   description = Re-running CMake...
   generator = 1
 

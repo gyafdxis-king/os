@@ -10,14 +10,14 @@ The output was:
 
 Compilation of the C compiler identification source "CMakeCCompilerId.c" produced "CMakeCCompilerId.o"
 
-The C compiler identification is GNU, found in "/Users/gaolisha/workspace/diy-x86os-master/start/start/build/CMakeFiles/3.24.2/CompilerIdC/CMakeCCompilerId.o"
+The C compiler identification is GNU, found in "/Users/gaolisha/workspace/os/x86/build/CMakeFiles/3.24.2/CompilerIdC/CMakeCCompilerId.o"
 
 Determining if the C compiler works passed with the following output:
-Change Dir: /Users/gaolisha/workspace/diy-x86os-master/start/start/build/CMakeFiles/CMakeTmp
+Change Dir: /Users/gaolisha/workspace/os/x86/build/CMakeFiles/CMakeTmp
 
-Run Build Command(s):/usr/local/bin/ninja cmTC_79531 && [1/2] Building C object CMakeFiles/cmTC_79531.dir/testCCompiler.c.o
-[2/2] Linking C executable cmTC_79531
-x86_64-elf-gcc: warning: CMakeFiles/cmTC_79531.dir/testCCompiler.c.o: linker input file unused because linking not done
+Run Build Command(s):/usr/local/bin/ninja cmTC_71668 && [1/2] Building C object CMakeFiles/cmTC_71668.dir/testCCompiler.c.o
+[2/2] Linking C executable cmTC_71668
+x86_64-elf-gcc: warning: CMakeFiles/cmTC_71668.dir/testCCompiler.c.o: linker input file unused because linking not done
 
 
 

@@ -36,13 +36,13 @@ include CMakeFiles/rules.ninja
 #############################################
 # Logical path to working directory; prefix for absolute paths.
 
-cmake_ninja_workdir = /Users/gaolisha/workspace/diy-x86os-master/start/start/build/
+cmake_ninja_workdir = /Users/gaolisha/workspace/os/x86/build/
 
 #############################################
 # Utility command for edit_cache
 
 build CMakeFiles/edit_cache.util: CUSTOM_COMMAND
-  COMMAND = cd /Users/gaolisha/workspace/diy-x86os-master/start/start/build && /usr/local/Cellar/cmake/3.24.2/bin/ccmake -S/Users/gaolisha/workspace/diy-x86os-master/start/start -B/Users/gaolisha/workspace/diy-x86os-master/start/start/build
+  COMMAND = cd /Users/gaolisha/workspace/os/x86/build && /usr/local/Cellar/cmake/3.24.2/bin/ccmake -S/Users/gaolisha/workspace/os/x86 -B/Users/gaolisha/workspace/os/x86/build
   DESC = Running CMake cache editor...
   pool = console
   restat = 1
@@ -54,7 +54,7 @@ build edit_cache: phony CMakeFiles/edit_cache.util
 # Utility command for rebuild_cache
 
 build CMakeFiles/rebuild_cache.util: CUSTOM_COMMAND
-  COMMAND = cd /Users/gaolisha/workspace/diy-x86os-master/start/start/build && /usr/local/Cellar/cmake/3.24.2/bin/cmake --regenerate-during-build -S/Users/gaolisha/workspace/diy-x86os-master/start/start -B/Users/gaolisha/workspace/diy-x86os-master/start/start/build
+  COMMAND = cd /Users/gaolisha/workspace/os/x86/build && /usr/local/Cellar/cmake/3.24.2/bin/cmake --regenerate-during-build -S/Users/gaolisha/workspace/os/x86 -B/Users/gaolisha/workspace/os/x86/build
   DESC = Running CMake to regenerate build system...
   pool = console
   restat = 1
@@ -63,7 +63,7 @@ build rebuild_cache: phony CMakeFiles/rebuild_cache.util
 
 # =============================================================================
 # Write statements declared in CMakeLists.txt:
-# /Users/gaolisha/workspace/diy-x86os-master/start/start/CMakeLists.txt
+# /Users/gaolisha/workspace/os/x86/CMakeLists.txt
 # =============================================================================
 
 # =============================================================================
@@ -75,23 +75,19 @@ build rebuild_cache: phony CMakeFiles/rebuild_cache.util
 
 build cmake_object_order_depends_target_boot: phony || source/boot/CMakeFiles/boot.dir
 
-build source/boot/CMakeFiles/boot.dir/start.S.o: ASM_COMPILER__boot_Debug /Users/gaolisha/workspace/diy-x86os-master/start/start/source/boot/start.S || cmake_object_order_depends_target_boot
+build source/boot/CMakeFiles/boot.dir/start.S.o: ASM_COMPILER__boot_Debug /Users/gaolisha/workspace/os/x86/source/boot/start.S || cmake_object_order_depends_target_boot
   DEP_FILE = source/boot/CMakeFiles/boot.dir/start.S.o.d
   FLAGS = -m32 -g -g
-  INCLUDES = -I/Users/gaolisha/workspace/diy-x86os-master/start/start/source -I/Users/gaolisha/workspace/diy-x86os-master/start/start/source/kernel/include
+  INCLUDES = -I/Users/gaolisha/workspace/os/x86/source -I/Users/gaolisha/workspace/os/x86/source/kernel/include
   OBJECT_DIR = source/boot/CMakeFiles/boot.dir
   OBJECT_FILE_DIR = source/boot/CMakeFiles/boot.dir
-  TARGET_COMPILE_PDB = source/boot/CMakeFiles/boot.dir/
-  TARGET_PDB = source/boot/boot.pdb
 
-build source/boot/CMakeFiles/boot.dir/boot.c.o: C_COMPILER__boot_Debug /Users/gaolisha/workspace/diy-x86os-master/start/start/source/boot/boot.c || cmake_object_order_depends_target_boot
+build source/boot/CMakeFiles/boot.dir/boot.c.o: C_COMPILER__boot_Debug /Users/gaolisha/workspace/os/x86/source/boot/boot.c || cmake_object_order_depends_target_boot
   DEP_FILE = source/boot/CMakeFiles/boot.dir/boot.c.o.d
   FLAGS = -g -c -O0 -m32 -fno-pie -fno-stack-protector -fno-asynchronous-unwind-tables -g -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX11.1.sdk
-  INCLUDES = -I/Users/gaolisha/workspace/diy-x86os-master/start/start/source -I/Users/gaolisha/workspace/diy-x86os-master/start/start/source/kernel/include
+  INCLUDES = -I/Users/gaolisha/workspace/os/x86/source -I/Users/gaolisha/workspace/os/x86/source/kernel/include
   OBJECT_DIR = source/boot/CMakeFiles/boot.dir
   OBJECT_FILE_DIR = source/boot/CMakeFiles/boot.dir
-  TARGET_COMPILE_PDB = source/boot/CMakeFiles/boot.dir/
-  TARGET_PDB = source/boot/boot.pdb
 
 
 # =============================================================================
@@ -105,18 +101,17 @@ build source/boot/boot: C_EXECUTABLE_LINKER__boot_Debug source/boot/CMakeFiles/b
   FLAGS = -g -c -O0 -m32 -fno-pie -fno-stack-protector -fno-asynchronous-unwind-tables -g -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX11.1.sdk
   LINK_FLAGS = -m elf_i386  -Ttext=0x7c00  --section-start boot_end=0x7dfe
   OBJECT_DIR = source/boot/CMakeFiles/boot.dir
-  POST_BUILD = cd /Users/gaolisha/workspace/diy-x86os-master/start/start/build/source/boot && x86_64-elf-objcopy -O binary boot.elf /Users/gaolisha/workspace/diy-x86os-master/start/start/../../image/boot.bin && x86_64-elf-objdump -x -d -S -m i8086 /Users/gaolisha/workspace/diy-x86os-master/start/start/build/source/boot/boot.elf > boot_dis.txt && x86_64-elf-readelf -a /Users/gaolisha/workspace/diy-x86os-master/start/start/build/source/boot/boot.elf > boot_elf.txt
+  POST_BUILD = cd /Users/gaolisha/workspace/os/x86/build/source/boot && x86_64-elf-objcopy -O binary boot.elf /Users/gaolisha/workspace/os/x86/../image/boot.bin && x86_64-elf-objdump -x -d -S -m i8086 /Users/gaolisha/workspace/os/x86/build/source/boot/boot.elf > boot_dis.txt && x86_64-elf-readelf -a /Users/gaolisha/workspace/os/x86/build/source/boot/boot.elf > boot_elf.txt
   PRE_LINK = :
-  TARGET_COMPILE_PDB = source/boot/CMakeFiles/boot.dir/
   TARGET_FILE = source/boot/boot
-  TARGET_PDB = source/boot/boot.pdb
+  TARGET_PDB = boot.dbg
 
 
 #############################################
 # Utility command for edit_cache
 
 build source/boot/CMakeFiles/edit_cache.util: CUSTOM_COMMAND
-  COMMAND = cd /Users/gaolisha/workspace/diy-x86os-master/start/start/build/source/boot && /usr/local/Cellar/cmake/3.24.2/bin/ccmake -S/Users/gaolisha/workspace/diy-x86os-master/start/start -B/Users/gaolisha/workspace/diy-x86os-master/start/start/build
+  COMMAND = cd /Users/gaolisha/workspace/os/x86/build/source/boot && /usr/local/Cellar/cmake/3.24.2/bin/ccmake -S/Users/gaolisha/workspace/os/x86 -B/Users/gaolisha/workspace/os/x86/build
   DESC = Running CMake cache editor...
   pool = console
   restat = 1
@@ -128,7 +123,7 @@ build source/boot/edit_cache: phony source/boot/CMakeFiles/edit_cache.util
 # Utility command for rebuild_cache
 
 build source/boot/CMakeFiles/rebuild_cache.util: CUSTOM_COMMAND
-  COMMAND = cd /Users/gaolisha/workspace/diy-x86os-master/start/start/build/source/boot && /usr/local/Cellar/cmake/3.24.2/bin/cmake --regenerate-during-build -S/Users/gaolisha/workspace/diy-x86os-master/start/start -B/Users/gaolisha/workspace/diy-x86os-master/start/start/build
+  COMMAND = cd /Users/gaolisha/workspace/os/x86/build/source/boot && /usr/local/Cellar/cmake/3.24.2/bin/cmake --regenerate-during-build -S/Users/gaolisha/workspace/os/x86 -B/Users/gaolisha/workspace/os/x86/build
   DESC = Running CMake to regenerate build system...
   pool = console
   restat = 1
@@ -137,7 +132,7 @@ build source/boot/rebuild_cache: phony source/boot/CMakeFiles/rebuild_cache.util
 
 # =============================================================================
 # Write statements declared in CMakeLists.txt:
-# /Users/gaolisha/workspace/diy-x86os-master/start/start/CMakeLists.txt
+# /Users/gaolisha/workspace/os/x86/CMakeLists.txt
 # =============================================================================
 
 # =============================================================================
@@ -149,32 +144,26 @@ build source/boot/rebuild_cache: phony source/boot/CMakeFiles/rebuild_cache.util
 
 build cmake_object_order_depends_target_loader: phony || source/loader/CMakeFiles/loader.dir
 
-build source/loader/CMakeFiles/loader.dir/start.S.o: ASM_COMPILER__loader_Debug /Users/gaolisha/workspace/diy-x86os-master/start/start/source/loader/start.S || cmake_object_order_depends_target_loader
+build source/loader/CMakeFiles/loader.dir/start.S.o: ASM_COMPILER__loader_Debug /Users/gaolisha/workspace/os/x86/source/loader/start.S || cmake_object_order_depends_target_loader
   DEP_FILE = source/loader/CMakeFiles/loader.dir/start.S.o.d
   FLAGS = -m32 -g -g
-  INCLUDES = -I/Users/gaolisha/workspace/diy-x86os-master/start/start/source -I/Users/gaolisha/workspace/diy-x86os-master/start/start/source/kernel/include
+  INCLUDES = -I/Users/gaolisha/workspace/os/x86/source -I/Users/gaolisha/workspace/os/x86/source/kernel/include
   OBJECT_DIR = source/loader/CMakeFiles/loader.dir
   OBJECT_FILE_DIR = source/loader/CMakeFiles/loader.dir
-  TARGET_COMPILE_PDB = source/loader/CMakeFiles/loader.dir/
-  TARGET_PDB = source/loader/loader.pdb
 
-build source/loader/CMakeFiles/loader.dir/loader_16.c.o: C_COMPILER__loader_Debug /Users/gaolisha/workspace/diy-x86os-master/start/start/source/loader/loader_16.c || cmake_object_order_depends_target_loader
+build source/loader/CMakeFiles/loader.dir/loader_16.c.o: C_COMPILER__loader_Debug /Users/gaolisha/workspace/os/x86/source/loader/loader_16.c || cmake_object_order_depends_target_loader
   DEP_FILE = source/loader/CMakeFiles/loader.dir/loader_16.c.o.d
   FLAGS = -g -c -O0 -m32 -fno-pie -fno-stack-protector -fno-asynchronous-unwind-tables -g -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX11.1.sdk
-  INCLUDES = -I/Users/gaolisha/workspace/diy-x86os-master/start/start/source -I/Users/gaolisha/workspace/diy-x86os-master/start/start/source/kernel/include
+  INCLUDES = -I/Users/gaolisha/workspace/os/x86/source -I/Users/gaolisha/workspace/os/x86/source/kernel/include
   OBJECT_DIR = source/loader/CMakeFiles/loader.dir
   OBJECT_FILE_DIR = source/loader/CMakeFiles/loader.dir
-  TARGET_COMPILE_PDB = source/loader/CMakeFiles/loader.dir/
-  TARGET_PDB = source/loader/loader.pdb
 
-build source/loader/CMakeFiles/loader.dir/loader_32.c.o: C_COMPILER__loader_Debug /Users/gaolisha/workspace/diy-x86os-master/start/start/source/loader/loader_32.c || cmake_object_order_depends_target_loader
+build source/loader/CMakeFiles/loader.dir/loader_32.c.o: C_COMPILER__loader_Debug /Users/gaolisha/workspace/os/x86/source/loader/loader_32.c || cmake_object_order_depends_target_loader
   DEP_FILE = source/loader/CMakeFiles/loader.dir/loader_32.c.o.d
   FLAGS = -g -c -O0 -m32 -fno-pie -fno-stack-protector -fno-asynchronous-unwind-tables -g -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX11.1.sdk
-  INCLUDES = -I/Users/gaolisha/workspace/diy-x86os-master/start/start/source -I/Users/gaolisha/workspace/diy-x86os-master/start/start/source/kernel/include
+  INCLUDES = -I/Users/gaolisha/workspace/os/x86/source -I/Users/gaolisha/workspace/os/x86/source/kernel/include
   OBJECT_DIR = source/loader/CMakeFiles/loader.dir
   OBJECT_FILE_DIR = source/loader/CMakeFiles/loader.dir
-  TARGET_COMPILE_PDB = source/loader/CMakeFiles/loader.dir/
-  TARGET_PDB = source/loader/loader.pdb
 
 
 # =============================================================================
@@ -188,18 +177,17 @@ build source/loader/loader: C_EXECUTABLE_LINKER__loader_Debug source/loader/CMak
   FLAGS = -g -c -O0 -m32 -fno-pie -fno-stack-protector -fno-asynchronous-unwind-tables -g -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX11.1.sdk
   LINK_FLAGS = -m elf_i386 -Ttext=0x8000
   OBJECT_DIR = source/loader/CMakeFiles/loader.dir
-  POST_BUILD = cd /Users/gaolisha/workspace/diy-x86os-master/start/start/build/source/loader && x86_64-elf-objcopy -O binary loader.elf /Users/gaolisha/workspace/diy-x86os-master/start/start/../../image/loader.bin && x86_64-elf-objdump -x -d -S -m i8086 /Users/gaolisha/workspace/diy-x86os-master/start/start/build/source/loader/loader.elf > loader_dis.txt && x86_64-elf-readelf -a /Users/gaolisha/workspace/diy-x86os-master/start/start/build/source/loader/loader.elf > loader_elf.txt
+  POST_BUILD = cd /Users/gaolisha/workspace/os/x86/build/source/loader && x86_64-elf-objcopy -O binary loader.elf /Users/gaolisha/workspace/os/x86/../image/loader.bin && x86_64-elf-objdump -x -d -S -m i8086 /Users/gaolisha/workspace/os/x86/build/source/loader/loader.elf > loader_dis.txt && x86_64-elf-readelf -a /Users/gaolisha/workspace/os/x86/build/source/loader/loader.elf > loader_elf.txt
   PRE_LINK = :
-  TARGET_COMPILE_PDB = source/loader/CMakeFiles/loader.dir/
   TARGET_FILE = source/loader/loader
-  TARGET_PDB = source/loader/loader.pdb
+  TARGET_PDB = loader.dbg
 
 
 #############################################
 # Utility command for edit_cache
 
 build source/loader/CMakeFiles/edit_cache.util: CUSTOM_COMMAND
-  COMMAND = cd /Users/gaolisha/workspace/diy-x86os-master/start/start/build/source/loader && /usr/local/Cellar/cmake/3.24.2/bin/ccmake -S/Users/gaolisha/workspace/diy-x86os-master/start/start -B/Users/gaolisha/workspace/diy-x86os-master/start/start/build
+  COMMAND = cd /Users/gaolisha/workspace/os/x86/build/source/loader && /usr/local/Cellar/cmake/3.24.2/bin/ccmake -S/Users/gaolisha/workspace/os/x86 -B/Users/gaolisha/workspace/os/x86/build
   DESC = Running CMake cache editor...
   pool = console
   restat = 1
@@ -211,7 +199,7 @@ build source/loader/edit_cache: phony source/loader/CMakeFiles/edit_cache.util
 # Utility command for rebuild_cache
 
 build source/loader/CMakeFiles/rebuild_cache.util: CUSTOM_COMMAND
-  COMMAND = cd /Users/gaolisha/workspace/diy-x86os-master/start/start/build/source/loader && /usr/local/Cellar/cmake/3.24.2/bin/cmake --regenerate-during-build -S/Users/gaolisha/workspace/diy-x86os-master/start/start -B/Users/gaolisha/workspace/diy-x86os-master/start/start/build
+  COMMAND = cd /Users/gaolisha/workspace/os/x86/build/source/loader && /usr/local/Cellar/cmake/3.24.2/bin/cmake --regenerate-during-build -S/Users/gaolisha/workspace/os/x86 -B/Users/gaolisha/workspace/os/x86/build
   DESC = Running CMake to regenerate build system...
   pool = console
   restat = 1
@@ -220,7 +208,7 @@ build source/loader/rebuild_cache: phony source/loader/CMakeFiles/rebuild_cache.
 
 # =============================================================================
 # Write statements declared in CMakeLists.txt:
-# /Users/gaolisha/workspace/diy-x86os-master/start/start/CMakeLists.txt
+# /Users/gaolisha/workspace/os/x86/CMakeLists.txt
 # =============================================================================
 
 # =============================================================================
@@ -232,32 +220,26 @@ build source/loader/rebuild_cache: phony source/loader/CMakeFiles/rebuild_cache.
 
 build cmake_object_order_depends_target_kernel: phony || source/kernel/CMakeFiles/kernel.dir
 
-build source/kernel/CMakeFiles/kernel.dir/init/start.S.o: ASM_COMPILER__kernel_Debug /Users/gaolisha/workspace/diy-x86os-master/start/start/source/kernel/init/start.S || cmake_object_order_depends_target_kernel
+build source/kernel/CMakeFiles/kernel.dir/init/start.S.o: ASM_COMPILER__kernel_Debug /Users/gaolisha/workspace/os/x86/source/kernel/init/start.S || cmake_object_order_depends_target_kernel
   DEP_FILE = source/kernel/CMakeFiles/kernel.dir/init/start.S.o.d
   FLAGS = -m32 -g -g
-  INCLUDES = -I/Users/gaolisha/workspace/diy-x86os-master/start/start/source -I/Users/gaolisha/workspace/diy-x86os-master/start/start/source/kernel/include
+  INCLUDES = -I/Users/gaolisha/workspace/os/x86/source -I/Users/gaolisha/workspace/os/x86/source/kernel/include
   OBJECT_DIR = source/kernel/CMakeFiles/kernel.dir
   OBJECT_FILE_DIR = source/kernel/CMakeFiles/kernel.dir/init
-  TARGET_COMPILE_PDB = source/kernel/CMakeFiles/kernel.dir/
-  TARGET_PDB = source/kernel/kernel.pdb
 
-build source/kernel/CMakeFiles/kernel.dir/cpu/cpu.c.o: C_COMPILER__kernel_Debug /Users/gaolisha/workspace/diy-x86os-master/start/start/source/kernel/cpu/cpu.c || cmake_object_order_depends_target_kernel
+build source/kernel/CMakeFiles/kernel.dir/cpu/cpu.c.o: C_COMPILER__kernel_Debug /Users/gaolisha/workspace/os/x86/source/kernel/cpu/cpu.c || cmake_object_order_depends_target_kernel
   DEP_FILE = source/kernel/CMakeFiles/kernel.dir/cpu/cpu.c.o.d
   FLAGS = -g -c -O0 -m32 -fno-pie -fno-stack-protector -fno-asynchronous-unwind-tables -g -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX11.1.sdk
-  INCLUDES = -I/Users/gaolisha/workspace/diy-x86os-master/start/start/source -I/Users/gaolisha/workspace/diy-x86os-master/start/start/source/kernel/include
+  INCLUDES = -I/Users/gaolisha/workspace/os/x86/source -I/Users/gaolisha/workspace/os/x86/source/kernel/include
   OBJECT_DIR = source/kernel/CMakeFiles/kernel.dir
   OBJECT_FILE_DIR = source/kernel/CMakeFiles/kernel.dir/cpu
-  TARGET_COMPILE_PDB = source/kernel/CMakeFiles/kernel.dir/
-  TARGET_PDB = source/kernel/kernel.pdb
 
-build source/kernel/CMakeFiles/kernel.dir/init/init.c.o: C_COMPILER__kernel_Debug /Users/gaolisha/workspace/diy-x86os-master/start/start/source/kernel/init/init.c || cmake_object_order_depends_target_kernel
+build source/kernel/CMakeFiles/kernel.dir/init/init.c.o: C_COMPILER__kernel_Debug /Users/gaolisha/workspace/os/x86/source/kernel/init/init.c || cmake_object_order_depends_target_kernel
   DEP_FILE = source/kernel/CMakeFiles/kernel.dir/init/init.c.o.d
   FLAGS = -g -c -O0 -m32 -fno-pie -fno-stack-protector -fno-asynchronous-unwind-tables -g -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX11.1.sdk
-  INCLUDES = -I/Users/gaolisha/workspace/diy-x86os-master/start/start/source -I/Users/gaolisha/workspace/diy-x86os-master/start/start/source/kernel/include
+  INCLUDES = -I/Users/gaolisha/workspace/os/x86/source -I/Users/gaolisha/workspace/os/x86/source/kernel/include
   OBJECT_DIR = source/kernel/CMakeFiles/kernel.dir
   OBJECT_FILE_DIR = source/kernel/CMakeFiles/kernel.dir/init
-  TARGET_COMPILE_PDB = source/kernel/CMakeFiles/kernel.dir/
-  TARGET_PDB = source/kernel/kernel.pdb
 
 
 # =============================================================================
@@ -269,20 +251,19 @@ build source/kernel/CMakeFiles/kernel.dir/init/init.c.o: C_COMPILER__kernel_Debu
 
 build source/kernel/kernel: C_EXECUTABLE_LINKER__kernel_Debug source/kernel/CMakeFiles/kernel.dir/init/start.S.o source/kernel/CMakeFiles/kernel.dir/cpu/cpu.c.o source/kernel/CMakeFiles/kernel.dir/init/init.c.o
   FLAGS = -g -c -O0 -m32 -fno-pie -fno-stack-protector -fno-asynchronous-unwind-tables -g -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX11.1.sdk
-  LINK_FLAGS = -m elf_i386 -T /Users/gaolisha/workspace/diy-x86os-master/start/start/source/kernel/kernel.lds
+  LINK_FLAGS = -m elf_i386 -T /Users/gaolisha/workspace/os/x86/source/kernel/kernel.lds
   OBJECT_DIR = source/kernel/CMakeFiles/kernel.dir
-  POST_BUILD = cd /Users/gaolisha/workspace/diy-x86os-master/start/start/build/source/kernel && x86_64-elf-objcopy -O binary kernel.elf /Users/gaolisha/workspace/diy-x86os-master/start/start/../../image/kernel.bin && x86_64-elf-objdump -x -d -S -m i386 /Users/gaolisha/workspace/diy-x86os-master/start/start/build/source/kernel/kernel.elf > kernel_dis.txt && x86_64-elf-readelf -a /Users/gaolisha/workspace/diy-x86os-master/start/start/build/source/kernel/kernel.elf > kernel_elf.txt
+  POST_BUILD = cd /Users/gaolisha/workspace/os/x86/build/source/kernel && x86_64-elf-objcopy -O binary kernel.elf /Users/gaolisha/workspace/os/x86/../image/kernel.bin && x86_64-elf-objdump -x -d -S -m i386 /Users/gaolisha/workspace/os/x86/build/source/kernel/kernel.elf > kernel_dis.txt && x86_64-elf-readelf -a /Users/gaolisha/workspace/os/x86/build/source/kernel/kernel.elf > kernel_elf.txt
   PRE_LINK = :
-  TARGET_COMPILE_PDB = source/kernel/CMakeFiles/kernel.dir/
   TARGET_FILE = source/kernel/kernel
-  TARGET_PDB = source/kernel/kernel.pdb
+  TARGET_PDB = kernel.dbg
 
 
 #############################################
 # Utility command for edit_cache
 
 build source/kernel/CMakeFiles/edit_cache.util: CUSTOM_COMMAND
-  COMMAND = cd /Users/gaolisha/workspace/diy-x86os-master/start/start/build/source/kernel && /usr/local/Cellar/cmake/3.24.2/bin/ccmake -S/Users/gaolisha/workspace/diy-x86os-master/start/start -B/Users/gaolisha/workspace/diy-x86os-master/start/start/build
+  COMMAND = cd /Users/gaolisha/workspace/os/x86/build/source/kernel && /usr/local/Cellar/cmake/3.24.2/bin/ccmake -S/Users/gaolisha/workspace/os/x86 -B/Users/gaolisha/workspace/os/x86/build
   DESC = Running CMake cache editor...
   pool = console
   restat = 1
@@ -294,7 +275,7 @@ build source/kernel/edit_cache: phony source/kernel/CMakeFiles/edit_cache.util
 # Utility command for rebuild_cache
 
 build source/kernel/CMakeFiles/rebuild_cache.util: CUSTOM_COMMAND
-  COMMAND = cd /Users/gaolisha/workspace/diy-x86os-master/start/start/build/source/kernel && /usr/local/Cellar/cmake/3.24.2/bin/cmake --regenerate-during-build -S/Users/gaolisha/workspace/diy-x86os-master/start/start -B/Users/gaolisha/workspace/diy-x86os-master/start/start/build
+  COMMAND = cd /Users/gaolisha/workspace/os/x86/build/source/kernel && /usr/local/Cellar/cmake/3.24.2/bin/cmake --regenerate-during-build -S/Users/gaolisha/workspace/os/x86 -B/Users/gaolisha/workspace/os/x86/build
   DESC = Running CMake to regenerate build system...
   pool = console
   restat = 1
@@ -316,28 +297,28 @@ build loader: phony source/loader/loader
 # =============================================================================
 
 #############################################
-# Folder: /Users/gaolisha/workspace/diy-x86os-master/start/start/build
+# Folder: /Users/gaolisha/workspace/os/x86/build
 
 build all: phony source/boot/all source/loader/all source/kernel/all
 
 # =============================================================================
 
 #############################################
-# Folder: /Users/gaolisha/workspace/diy-x86os-master/start/start/build/source/boot
+# Folder: /Users/gaolisha/workspace/os/x86/build/source/boot
 
 build source/boot/all: phony source/boot/boot
 
 # =============================================================================
 
 #############################################
-# Folder: /Users/gaolisha/workspace/diy-x86os-master/start/start/build/source/kernel
+# Folder: /Users/gaolisha/workspace/os/x86/build/source/kernel
 
 build source/kernel/all: phony source/kernel/kernel
 
 # =============================================================================
 
 #############################################
-# Folder: /Users/gaolisha/workspace/diy-x86os-master/start/start/build/source/loader
+# Folder: /Users/gaolisha/workspace/os/x86/build/source/loader
 
 build source/loader/all: phony source/loader/loader
 
@@ -353,14 +334,14 @@ build source/loader/all: phony source/loader/loader
 #############################################
 # Re-run CMake if any of its inputs changed.
 
-build build.ninja: RERUN_CMAKE | /Users/gaolisha/workspace/diy-x86os-master/start/start/CMakeLists.txt /Users/gaolisha/workspace/diy-x86os-master/start/start/source/boot/CMakeLists.txt /Users/gaolisha/workspace/diy-x86os-master/start/start/source/kernel/CMakeLists.txt /Users/gaolisha/workspace/diy-x86os-master/start/start/source/loader/CMakeLists.txt /usr/local/Cellar/cmake/3.24.2/share/cmake/Modules/CMakeASMCompiler.cmake.in /usr/local/Cellar/cmake/3.24.2/share/cmake/Modules/CMakeASMInformation.cmake /usr/local/Cellar/cmake/3.24.2/share/cmake/Modules/CMakeCCompiler.cmake.in /usr/local/Cellar/cmake/3.24.2/share/cmake/Modules/CMakeCCompilerABI.c /usr/local/Cellar/cmake/3.24.2/share/cmake/Modules/CMakeCInformation.cmake /usr/local/Cellar/cmake/3.24.2/share/cmake/Modules/CMakeCommonLanguageInclude.cmake /usr/local/Cellar/cmake/3.24.2/share/cmake/Modules/CMakeCompilerIdDetection.cmake /usr/local/Cellar/cmake/3.24.2/share/cmake/Modules/CMakeDetermineASMCompiler.cmake /usr/local/Cellar/cmake/3.24.2/share/cmake/Modules/CMakeDetermineCCompiler.cmake /usr/local/Cellar/cmake/3.24.2/share/cmake/Modules/CMakeDetermineCompileFeatures.cmake /usr/local/Cellar/cmake/3.24.2/share/cmake/Modules/CMakeDetermineCompiler.cmake /usr/local/Cellar/cmake/3.24.2/share/cmake/Modules/CMakeDetermineCompilerABI.cmake /usr/local/Cellar/cmake/3.24.2/share/cmake/Modules/CMakeDetermineCompilerId.cmake /usr/local/Cellar/cmake/3.24.2/share/cmake/Modules/CMakeDetermineSystem.cmake /usr/local/Cellar/cmake/3.24.2/share/cmake/Modules/CMakeFindBinUtils.cmake /usr/local/Cellar/cmake/3.24.2/share/cmake/Modules/CMakeGenericSystem.cmake /usr/local/Cellar/cmake/3.24.2/share/cmake/Modules/CMakeInitializeConfigs.cmake /usr/local/Cellar/cmake/3.24.2/share/cmake/Modules/CMakeLanguageInformation.cmake /usr/local/Cellar/cmake/3.24.2/share/cmake/Modules/CMakeNinjaFindMake.cmake /usr/local/Cellar/cmake/3.24.2/share/cmake/Modules/CMakeParseImplicitIncludeInfo.cmake /usr/local/Cellar/cmake/3.24.2/share/cmake/Modules/CMakeParseImplicitLinkInfo.cmake /usr/local/Cellar/cmake/3.24.2/share/cmake/Modules/CMakeParseLibraryArchitecture.cmake /usr/local/Cellar/cmake/3.24.2/share/cmake/Modules/CMakeSystem.cmake.in /usr/local/Cellar/cmake/3.24.2/share/cmake/Modules/CMakeSystemSpecificInformation.cmake /usr/local/Cellar/cmake/3.24.2/share/cmake/Modules/CMakeSystemSpecificInitialize.cmake /usr/local/Cellar/cmake/3.24.2/share/cmake/Modules/CMakeTestASMCompiler.cmake /usr/local/Cellar/cmake/3.24.2/share/cmake/Modules/CMakeTestCCompiler.cmake /usr/local/Cellar/cmake/3.24.2/share/cmake/Modules/CMakeTestCompilerCommon.cmake /usr/local/Cellar/cmake/3.24.2/share/cmake/Modules/Compiler/ADSP-DetermineCompiler.cmake /usr/local/Cellar/cmake/3.24.2/share/cmake/Modules/Compiler/ARMCC-DetermineCompiler.cmake /usr/local/Cellar/cmake/3.24.2/share/cmake/Modules/Compiler/ARMClang-DetermineCompiler.cmake /usr/local/Cellar/cmake/3.24.2/share/cmake/Modules/Compiler/AppleClang-DetermineCompiler.cmake /usr/local/Cellar/cmake/3.24.2/share/cmake/Modules/Compiler/Borland-DetermineCompiler.cmake /usr/local/Cellar/cmake/3.24.2/share/cmake/Modules/Compiler/Bruce-C-DetermineCompiler.cmake /usr/local/Cellar/cmake/3.24.2/share/cmake/Modules/Compiler/CMakeCommonCompilerMacros.cmake /usr/local/Cellar/cmake/3.24.2/share/cmake/Modules/Compiler/Clang-DetermineCompiler.cmake /usr/local/Cellar/cmake/3.24.2/share/cmake/Modules/Compiler/Clang-DetermineCompilerInternal.cmake /usr/local/Cellar/cmake/3.24.2/share/cmake/Modules/Compiler/Compaq-C-DetermineCompiler.cmake /usr/local/Cellar/cmake/3.24.2/share/cmake/Modules/Compiler/Cray-DetermineCompiler.cmake /usr/local/Cellar/cmake/3.24.2/share/cmake/Modules/Compiler/Embarcadero-DetermineCompiler.cmake /usr/local/Cellar/cmake/3.24.2/share/cmake/Modules/Compiler/Fujitsu-DetermineCompiler.cmake /usr/local/Cellar/cmake/3.24.2/share/cmake/Modules/Compiler/FujitsuClang-DetermineCompiler.cmake /usr/local/Cellar/cmake/3.24.2/share/cmake/Modules/Compiler/GHS-DetermineCompiler.cmake /usr/local/Cellar/cmake/3.24.2/share/cmake/Modules/Compiler/GNU-ASM.cmake /usr/local/Cellar/cmake/3.24.2/share/cmake/Modules/Compiler/GNU-C-DetermineCompiler.cmake /usr/local/Cellar/cmake/3.24.2/share/cmake/Modules/Compiler/GNU-C.cmake /usr/local/Cellar/cmake/3.24.2/share/cmake/Modules/Compiler/GNU-FindBinUtils.cmake /usr/local/Cellar/cmake/3.24.2/share/cmake/Modules/Compiler/GNU.cmake /usr/local/Cellar/cmake/3.24.2/share/cmake/Modules/Compiler/HP-C-DetermineCompiler.cmake /usr/local/Cellar/cmake/3.24.2/share/cmake/Modules/Compiler/IAR-DetermineCompiler.cmake /usr/local/Cellar/cmake/3.24.2/share/cmake/Modules/Compiler/IBMCPP-C-DetermineVersionInternal.cmake /usr/local/Cellar/cmake/3.24.2/share/cmake/Modules/Compiler/IBMClang-C-DetermineCompiler.cmake /usr/local/Cellar/cmake/3.24.2/share/cmake/Modules/Compiler/Intel-DetermineCompiler.cmake /usr/local/Cellar/cmake/3.24.2/share/cmake/Modules/Compiler/IntelLLVM-DetermineCompiler.cmake /usr/local/Cellar/cmake/3.24.2/share/cmake/Modules/Compiler/LCC-C-DetermineCompiler.cmake /usr/local/Cellar/cmake/3.24.2/share/cmake/Modules/Compiler/MSVC-DetermineCompiler.cmake /usr/local/Cellar/cmake/3.24.2/share/cmake/Modules/Compiler/NVHPC-DetermineCompiler.cmake /usr/local/Cellar/cmake/3.24.2/share/cmake/Modules/Compiler/NVIDIA-DetermineCompiler.cmake /usr/local/Cellar/cmake/3.24.2/share/cmake/Modules/Compiler/OpenWatcom-DetermineCompiler.cmake /usr/local/Cellar/cmake/3.24.2/share/cmake/Modules/Compiler/PGI-DetermineCompiler.cmake /usr/local/Cellar/cmake/3.24.2/share/cmake/Modules/Compiler/PathScale-DetermineCompiler.cmake /usr/local/Cellar/cmake/3.24.2/share/cmake/Modules/Compiler/SCO-DetermineCompiler.cmake /usr/local/Cellar/cmake/3.24.2/share/cmake/Modules/Compiler/SDCC-C-DetermineCompiler.cmake /usr/local/Cellar/cmake/3.24.2/share/cmake/Modules/Compiler/SunPro-C-DetermineCompiler.cmake /usr/local/Cellar/cmake/3.24.2/share/cmake/Modules/Compiler/TI-DetermineCompiler.cmake /usr/local/Cellar/cmake/3.24.2/share/cmake/Modules/Compiler/TinyCC-C-DetermineCompiler.cmake /usr/local/Cellar/cmake/3.24.2/share/cmake/Modules/Compiler/VisualAge-C-DetermineCompiler.cmake /usr/local/Cellar/cmake/3.24.2/share/cmake/Modules/Compiler/Watcom-DetermineCompiler.cmake /usr/local/Cellar/cmake/3.24.2/share/cmake/Modules/Compiler/XL-C-DetermineCompiler.cmake /usr/local/Cellar/cmake/3.24.2/share/cmake/Modules/Compiler/XLClang-C-DetermineCompiler.cmake /usr/local/Cellar/cmake/3.24.2/share/cmake/Modules/Compiler/zOS-C-DetermineCompiler.cmake /usr/local/Cellar/cmake/3.24.2/share/cmake/Modules/Internal/FeatureTesting.cmake /usr/local/Cellar/cmake/3.24.2/share/cmake/Modules/Platform/Apple-GNU-C.cmake /usr/local/Cellar/cmake/3.24.2/share/cmake/Modules/Platform/Apple-GNU.cmake /usr/local/Cellar/cmake/3.24.2/share/cmake/Modules/Platform/Darwin-Initialize.cmake /usr/local/Cellar/cmake/3.24.2/share/cmake/Modules/Platform/Darwin.cmake /usr/local/Cellar/cmake/3.24.2/share/cmake/Modules/Platform/UnixPaths.cmake CMakeCache.txt CMakeFiles/3.24.2/CMakeASMCompiler.cmake CMakeFiles/3.24.2/CMakeCCompiler.cmake CMakeFiles/3.24.2/CMakeSystem.cmake
+build build.ninja: RERUN_CMAKE | /Users/gaolisha/workspace/os/x86/CMakeLists.txt /Users/gaolisha/workspace/os/x86/source/boot/CMakeLists.txt /Users/gaolisha/workspace/os/x86/source/kernel/CMakeLists.txt /Users/gaolisha/workspace/os/x86/source/loader/CMakeLists.txt /usr/local/Cellar/cmake/3.24.2/share/cmake/Modules/CMakeASMInformation.cmake /usr/local/Cellar/cmake/3.24.2/share/cmake/Modules/CMakeCInformation.cmake /usr/local/Cellar/cmake/3.24.2/share/cmake/Modules/CMakeCommonLanguageInclude.cmake /usr/local/Cellar/cmake/3.24.2/share/cmake/Modules/CMakeGenericSystem.cmake /usr/local/Cellar/cmake/3.24.2/share/cmake/Modules/CMakeInitializeConfigs.cmake /usr/local/Cellar/cmake/3.24.2/share/cmake/Modules/CMakeLanguageInformation.cmake /usr/local/Cellar/cmake/3.24.2/share/cmake/Modules/CMakeSystemSpecificInformation.cmake /usr/local/Cellar/cmake/3.24.2/share/cmake/Modules/CMakeSystemSpecificInitialize.cmake /usr/local/Cellar/cmake/3.24.2/share/cmake/Modules/Compiler/CMakeCommonCompilerMacros.cmake /usr/local/Cellar/cmake/3.24.2/share/cmake/Modules/Compiler/GNU-ASM.cmake /usr/local/Cellar/cmake/3.24.2/share/cmake/Modules/Compiler/GNU-C.cmake /usr/local/Cellar/cmake/3.24.2/share/cmake/Modules/Compiler/GNU.cmake /usr/local/Cellar/cmake/3.24.2/share/cmake/Modules/Platform/Apple-GNU-C.cmake /usr/local/Cellar/cmake/3.24.2/share/cmake/Modules/Platform/Apple-GNU.cmake /usr/local/Cellar/cmake/3.24.2/share/cmake/Modules/Platform/Darwin-Initialize.cmake /usr/local/Cellar/cmake/3.24.2/share/cmake/Modules/Platform/Darwin.cmake /usr/local/Cellar/cmake/3.24.2/share/cmake/Modules/Platform/UnixPaths.cmake CMakeCache.txt CMakeFiles/3.24.2/CMakeASMCompiler.cmake CMakeFiles/3.24.2/CMakeCCompiler.cmake CMakeFiles/3.24.2/CMakeSystem.cmake
   pool = console
 
 
 #############################################
 # A missing CMake input file is not an error.
 
-build /Users/gaolisha/workspace/diy-x86os-master/start/start/CMakeLists.txt /Users/gaolisha/workspace/diy-x86os-master/start/start/source/boot/CMakeLists.txt /Users/gaolisha/workspace/diy-x86os-master/start/start/source/kernel/CMakeLists.txt /Users/gaolisha/workspace/diy-x86os-master/start/start/source/loader/CMakeLists.txt /usr/local/Cellar/cmake/3.24.2/share/cmake/Modules/CMakeASMCompiler.cmake.in /usr/local/Cellar/cmake/3.24.2/share/cmake/Modules/CMakeASMInformation.cmake /usr/local/Cellar/cmake/3.24.2/share/cmake/Modules/CMakeCCompiler.cmake.in /usr/local/Cellar/cmake/3.24.2/share/cmake/Modules/CMakeCCompilerABI.c /usr/local/Cellar/cmake/3.24.2/share/cmake/Modules/CMakeCInformation.cmake /usr/local/Cellar/cmake/3.24.2/share/cmake/Modules/CMakeCommonLanguageInclude.cmake /usr/local/Cellar/cmake/3.24.2/share/cmake/Modules/CMakeCompilerIdDetection.cmake /usr/local/Cellar/cmake/3.24.2/share/cmake/Modules/CMakeDetermineASMCompiler.cmake /usr/local/Cellar/cmake/3.24.2/share/cmake/Modules/CMakeDetermineCCompiler.cmake /usr/local/Cellar/cmake/3.24.2/share/cmake/Modules/CMakeDetermineCompileFeatures.cmake /usr/local/Cellar/cmake/3.24.2/share/cmake/Modules/CMakeDetermineCompiler.cmake /usr/local/Cellar/cmake/3.24.2/share/cmake/Modules/CMakeDetermineCompilerABI.cmake /usr/local/Cellar/cmake/3.24.2/share/cmake/Modules/CMakeDetermineCompilerId.cmake /usr/local/Cellar/cmake/3.24.2/share/cmake/Modules/CMakeDetermineSystem.cmake /usr/local/Cellar/cmake/3.24.2/share/cmake/Modules/CMakeFindBinUtils.cmake /usr/local/Cellar/cmake/3.24.2/share/cmake/Modules/CMakeGenericSystem.cmake /usr/local/Cellar/cmake/3.24.2/share/cmake/Modules/CMakeInitializeConfigs.cmake /usr/local/Cellar/cmake/3.24.2/share/cmake/Modules/CMakeLanguageInformation.cmake /usr/local/Cellar/cmake/3.24.2/share/cmake/Modules/CMakeNinjaFindMake.cmake /usr/local/Cellar/cmake/3.24.2/share/cmake/Modules/CMakeParseImplicitIncludeInfo.cmake /usr/local/Cellar/cmake/3.24.2/share/cmake/Modules/CMakeParseImplicitLinkInfo.cmake /usr/local/Cellar/cmake/3.24.2/share/cmake/Modules/CMakeParseLibraryArchitecture.cmake /usr/local/Cellar/cmake/3.24.2/share/cmake/Modules/CMakeSystem.cmake.in /usr/local/Cellar/cmake/3.24.2/share/cmake/Modules/CMakeSystemSpecificInformation.cmake /usr/local/Cellar/cmake/3.24.2/share/cmake/Modules/CMakeSystemSpecificInitialize.cmake /usr/local/Cellar/cmake/3.24.2/share/cmake/Modules/CMakeTestASMCompiler.cmake /usr/local/Cellar/cmake/3.24.2/share/cmake/Modules/CMakeTestCCompiler.cmake /usr/local/Cellar/cmake/3.24.2/share/cmake/Modules/CMakeTestCompilerCommon.cmake /usr/local/Cellar/cmake/3.24.2/share/cmake/Modules/Compiler/ADSP-DetermineCompiler.cmake /usr/local/Cellar/cmake/3.24.2/share/cmake/Modules/Compiler/ARMCC-DetermineCompiler.cmake /usr/local/Cellar/cmake/3.24.2/share/cmake/Modules/Compiler/ARMClang-DetermineCompiler.cmake /usr/local/Cellar/cmake/3.24.2/share/cmake/Modules/Compiler/AppleClang-DetermineCompiler.cmake /usr/local/Cellar/cmake/3.24.2/share/cmake/Modules/Compiler/Borland-DetermineCompiler.cmake /usr/local/Cellar/cmake/3.24.2/share/cmake/Modules/Compiler/Bruce-C-DetermineCompiler.cmake /usr/local/Cellar/cmake/3.24.2/share/cmake/Modules/Compiler/CMakeCommonCompilerMacros.cmake /usr/local/Cellar/cmake/3.24.2/share/cmake/Modules/Compiler/Clang-DetermineCompiler.cmake /usr/local/Cellar/cmake/3.24.2/share/cmake/Modules/Compiler/Clang-DetermineCompilerInternal.cmake /usr/local/Cellar/cmake/3.24.2/share/cmake/Modules/Compiler/Compaq-C-DetermineCompiler.cmake /usr/local/Cellar/cmake/3.24.2/share/cmake/Modules/Compiler/Cray-DetermineCompiler.cmake /usr/local/Cellar/cmake/3.24.2/share/cmake/Modules/Compiler/Embarcadero-DetermineCompiler.cmake /usr/local/Cellar/cmake/3.24.2/share/cmake/Modules/Compiler/Fujitsu-DetermineCompiler.cmake /usr/local/Cellar/cmake/3.24.2/share/cmake/Modules/Compiler/FujitsuClang-DetermineCompiler.cmake /usr/local/Cellar/cmake/3.24.2/share/cmake/Modules/Compiler/GHS-DetermineCompiler.cmake /usr/local/Cellar/cmake/3.24.2/share/cmake/Modules/Compiler/GNU-ASM.cmake /usr/local/Cellar/cmake/3.24.2/share/cmake/Modules/Compiler/GNU-C-DetermineCompiler.cmake /usr/local/Cellar/cmake/3.24.2/share/cmake/Modules/Compiler/GNU-C.cmake /usr/local/Cellar/cmake/3.24.2/share/cmake/Modules/Compiler/GNU-FindBinUtils.cmake /usr/local/Cellar/cmake/3.24.2/share/cmake/Modules/Compiler/GNU.cmake /usr/local/Cellar/cmake/3.24.2/share/cmake/Modules/Compiler/HP-C-DetermineCompiler.cmake /usr/local/Cellar/cmake/3.24.2/share/cmake/Modules/Compiler/IAR-DetermineCompiler.cmake /usr/local/Cellar/cmake/3.24.2/share/cmake/Modules/Compiler/IBMCPP-C-DetermineVersionInternal.cmake /usr/local/Cellar/cmake/3.24.2/share/cmake/Modules/Compiler/IBMClang-C-DetermineCompiler.cmake /usr/local/Cellar/cmake/3.24.2/share/cmake/Modules/Compiler/Intel-DetermineCompiler.cmake /usr/local/Cellar/cmake/3.24.2/share/cmake/Modules/Compiler/IntelLLVM-DetermineCompiler.cmake /usr/local/Cellar/cmake/3.24.2/share/cmake/Modules/Compiler/LCC-C-DetermineCompiler.cmake /usr/local/Cellar/cmake/3.24.2/share/cmake/Modules/Compiler/MSVC-DetermineCompiler.cmake /usr/local/Cellar/cmake/3.24.2/share/cmake/Modules/Compiler/NVHPC-DetermineCompiler.cmake /usr/local/Cellar/cmake/3.24.2/share/cmake/Modules/Compiler/NVIDIA-DetermineCompiler.cmake /usr/local/Cellar/cmake/3.24.2/share/cmake/Modules/Compiler/OpenWatcom-DetermineCompiler.cmake /usr/local/Cellar/cmake/3.24.2/share/cmake/Modules/Compiler/PGI-DetermineCompiler.cmake /usr/local/Cellar/cmake/3.24.2/share/cmake/Modules/Compiler/PathScale-DetermineCompiler.cmake /usr/local/Cellar/cmake/3.24.2/share/cmake/Modules/Compiler/SCO-DetermineCompiler.cmake /usr/local/Cellar/cmake/3.24.2/share/cmake/Modules/Compiler/SDCC-C-DetermineCompiler.cmake /usr/local/Cellar/cmake/3.24.2/share/cmake/Modules/Compiler/SunPro-C-DetermineCompiler.cmake /usr/local/Cellar/cmake/3.24.2/share/cmake/Modules/Compiler/TI-DetermineCompiler.cmake /usr/local/Cellar/cmake/3.24.2/share/cmake/Modules/Compiler/TinyCC-C-DetermineCompiler.cmake /usr/local/Cellar/cmake/3.24.2/share/cmake/Modules/Compiler/VisualAge-C-DetermineCompiler.cmake /usr/local/Cellar/cmake/3.24.2/share/cmake/Modules/Compiler/Watcom-DetermineCompiler.cmake /usr/local/Cellar/cmake/3.24.2/share/cmake/Modules/Compiler/XL-C-DetermineCompiler.cmake /usr/local/Cellar/cmake/3.24.2/share/cmake/Modules/Compiler/XLClang-C-DetermineCompiler.cmake /usr/local/Cellar/cmake/3.24.2/share/cmake/Modules/Compiler/zOS-C-DetermineCompiler.cmake /usr/local/Cellar/cmake/3.24.2/share/cmake/Modules/Internal/FeatureTesting.cmake /usr/local/Cellar/cmake/3.24.2/share/cmake/Modules/Platform/Apple-GNU-C.cmake /usr/local/Cellar/cmake/3.24.2/share/cmake/Modules/Platform/Apple-GNU.cmake /usr/local/Cellar/cmake/3.24.2/share/cmake/Modules/Platform/Darwin-Initialize.cmake /usr/local/Cellar/cmake/3.24.2/share/cmake/Modules/Platform/Darwin.cmake /usr/local/Cellar/cmake/3.24.2/share/cmake/Modules/Platform/UnixPaths.cmake CMakeCache.txt CMakeFiles/3.24.2/CMakeASMCompiler.cmake CMakeFiles/3.24.2/CMakeCCompiler.cmake CMakeFiles/3.24.2/CMakeSystem.cmake: phony
+build /Users/gaolisha/workspace/os/x86/CMakeLists.txt /Users/gaolisha/workspace/os/x86/source/boot/CMakeLists.txt /Users/gaolisha/workspace/os/x86/source/kernel/CMakeLists.txt /Users/gaolisha/workspace/os/x86/source/loader/CMakeLists.txt /usr/local/Cellar/cmake/3.24.2/share/cmake/Modules/CMakeASMInformation.cmake /usr/local/Cellar/cmake/3.24.2/share/cmake/Modules/CMakeCInformation.cmake /usr/local/Cellar/cmake/3.24.2/share/cmake/Modules/CMakeCommonLanguageInclude.cmake /usr/local/Cellar/cmake/3.24.2/share/cmake/Modules/CMakeGenericSystem.cmake /usr/local/Cellar/cmake/3.24.2/share/cmake/Modules/CMakeInitializeConfigs.cmake /usr/local/Cellar/cmake/3.24.2/share/cmake/Modules/CMakeLanguageInformation.cmake /usr/local/Cellar/cmake/3.24.2/share/cmake/Modules/CMakeSystemSpecificInformation.cmake /usr/local/Cellar/cmake/3.24.2/share/cmake/Modules/CMakeSystemSpecificInitialize.cmake /usr/local/Cellar/cmake/3.24.2/share/cmake/Modules/Compiler/CMakeCommonCompilerMacros.cmake /usr/local/Cellar/cmake/3.24.2/share/cmake/Modules/Compiler/GNU-ASM.cmake /usr/local/Cellar/cmake/3.24.2/share/cmake/Modules/Compiler/GNU-C.cmake /usr/local/Cellar/cmake/3.24.2/share/cmake/Modules/Compiler/GNU.cmake /usr/local/Cellar/cmake/3.24.2/share/cmake/Modules/Platform/Apple-GNU-C.cmake /usr/local/Cellar/cmake/3.24.2/share/cmake/Modules/Platform/Apple-GNU.cmake /usr/local/Cellar/cmake/3.24.2/share/cmake/Modules/Platform/Darwin-Initialize.cmake /usr/local/Cellar/cmake/3.24.2/share/cmake/Modules/Platform/Darwin.cmake /usr/local/Cellar/cmake/3.24.2/share/cmake/Modules/Platform/UnixPaths.cmake CMakeCache.txt CMakeFiles/3.24.2/CMakeASMCompiler.cmake CMakeFiles/3.24.2/CMakeCCompiler.cmake CMakeFiles/3.24.2/CMakeSystem.cmake: phony
 
 
 #############################################
