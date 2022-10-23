@@ -253,7 +253,7 @@ build source/kernel/kernel: C_EXECUTABLE_LINKER__kernel_Debug source/kernel/CMak
   FLAGS = -g -c -O0 -m32 -fno-pie -fno-stack-protector -fno-asynchronous-unwind-tables -g -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX11.1.sdk
   LINK_FLAGS = -m elf_i386 -T /Users/gaolisha/workspace/os/x86/source/kernel/kernel.lds
   OBJECT_DIR = source/kernel/CMakeFiles/kernel.dir
-  POST_BUILD = cd /Users/gaolisha/workspace/os/x86/build/source/kernel && x86_64-elf-objcopy -O binary kernel.elf /Users/gaolisha/workspace/os/x86/../image/kernel.bin && x86_64-elf-objdump -x -d -S -m i386 /Users/gaolisha/workspace/os/x86/build/source/kernel/kernel.elf > kernel_dis.txt && x86_64-elf-readelf -a /Users/gaolisha/workspace/os/x86/build/source/kernel/kernel.elf > kernel_elf.txt
+  POST_BUILD = cd /Users/gaolisha/workspace/os/x86/build/source/kernel && x86_64-elf-objcopy -S kernel.elf /Users/gaolisha/workspace/os/x86/../image/kernel.elf && x86_64-elf-objdump -x -d -S -m i386 /Users/gaolisha/workspace/os/x86/build/source/kernel/kernel.elf > kernel_dis.txt && x86_64-elf-readelf -a /Users/gaolisha/workspace/os/x86/build/source/kernel/kernel.elf > kernel_elf.txt
   PRE_LINK = :
   TARGET_FILE = source/kernel/kernel
   TARGET_PDB = kernel.dbg

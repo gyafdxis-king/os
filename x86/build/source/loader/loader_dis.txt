@@ -105,6 +105,7 @@ protect_mode_entry:
 00008018 <inb>:
 #ifndef CPU_INSTR_H
 #define CPU_INSTR_H
+#include "comm/types.h"
 
 static inline uint8_t inb (uint16_t port) {
     8018:	66 55                	push   %ebp
