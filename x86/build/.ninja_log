@@ -1,12 +1,14 @@
 # ninja log v5
-4	70	1666505402466477927	source/boot/CMakeFiles/boot.dir/start.S.o	b2592f79bbc4d215
-8	74	1666505402462806120	source/loader/CMakeFiles/loader.dir/start.S.o	f1512e7e8a38a134
-12	79	1666505402478282468	source/kernel/CMakeFiles/kernel.dir/init/start.S.o	4128329479348390
-6	81	1666505402479769478	source/boot/CMakeFiles/boot.dir/boot.c.o	adee82cc93ced23e
-81	132	0	source/boot/boot	2c0e1e8f49f295a6
-9	139	1666505402537362611	source/loader/CMakeFiles/loader.dir/loader_16.c.o	b849d27087d6f989
-74	143	1666505402541783554	source/kernel/CMakeFiles/kernel.dir/init/init.c.o	9919487cbcd8cea7
-11	159	1666505402558163953	source/loader/CMakeFiles/loader.dir/loader_32.c.o	c4d6a8bbb301d161
-71	168	1666505402566681543	source/kernel/CMakeFiles/kernel.dir/cpu/cpu.c.o	f41fda8c6627e2b1
-159	216	0	source/loader/loader	4b29d0e3460c1969
-168	226	0	source/kernel/kernel	882a2ccb9a6fca5b
+6	67	1666517916591461204	source/loader/CMakeFiles/loader.dir/start.S.o	d9a41ce3a9dbc2b0
+62	174	1666517916703850663	source/kernel/CMakeFiles/kernel.dir/cpu/cpu.c.o	eccdac755c375a2d
+9	123	1666517916652665110	source/loader/CMakeFiles/loader.dir/loader_32.c.o	530d7016fb777cbd
+174	228	0	source/kernel/kernel	1c1dd545801bd8d3
+3	61	1666517916589910840	source/boot/CMakeFiles/boot.dir/start.S.o	ee538c558047271
+68	152	1666517916681237535	source/kernel/CMakeFiles/kernel.dir/init/init.c.o	48cd5640d1e32c63
+7	172	1666517916701705357	source/loader/CMakeFiles/loader.dir/loader_16.c.o	2b78343b2d5cc38c
+4	133	1666517916661207411	source/boot/CMakeFiles/boot.dir/boot.c.o	99eb12da9d779ef7
+10	71	1666517916598742463	source/kernel/CMakeFiles/kernel.dir/init/start.S.o	d4a636ddd7795b71
+133	227	0	source/boot/boot	b59e9636d7655993
+2	58	0	source/boot/boot	b59e9636d7655993
+6	60	0	source/kernel/kernel	1c1dd545801bd8d3
+4	60	0	source/loader/loader	93bdee506af6cc5d

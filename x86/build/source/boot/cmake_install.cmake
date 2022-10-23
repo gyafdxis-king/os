@@ -1,4 +1,4 @@
-# Install script for directory: /Users/gaolisha/workspace/diy-x86os-master/code/c05.03/source/boot
+# Install script for directory: /Users/gaolisha/workspace/os/x86/source/boot
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
