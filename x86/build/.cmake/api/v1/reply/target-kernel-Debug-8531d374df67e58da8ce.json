@@ -2,7 +2,7 @@
 	"artifacts" : 
 	[
 		{
-			"path" : "source/boot/boot"
+			"path" : "source/kernel/kernel"
 		}
 	],
 	"backtrace" : 1,
@@ -15,7 +15,7 @@
 		],
 		"files" : 
 		[
-			"source/boot/CMakeLists.txt",
+			"source/kernel/CMakeLists.txt",
 			"CMakeLists.txt"
 		],
 		"nodes" : 
@@ -53,11 +53,11 @@
 			[
 				{
 					"backtrace" : 3,
-					"path" : "/Users/gaolisha/workspace/os/x86/source"
+					"path" : "/Users/gaolisha/workspace/diy-x86os-master/code/c05.03/source"
 				},
 				{
 					"backtrace" : 3,
-					"path" : "/Users/gaolisha/workspace/os/x86/source/kernel/include"
+					"path" : "/Users/gaolisha/workspace/diy-x86os-master/code/c05.03/source/kernel/include"
 				}
 			],
 			"language" : "ASM",
@@ -77,21 +77,22 @@
 			[
 				{
 					"backtrace" : 3,
-					"path" : "/Users/gaolisha/workspace/os/x86/source"
+					"path" : "/Users/gaolisha/workspace/diy-x86os-master/code/c05.03/source"
 				},
 				{
 					"backtrace" : 3,
-					"path" : "/Users/gaolisha/workspace/os/x86/source/kernel/include"
+					"path" : "/Users/gaolisha/workspace/diy-x86os-master/code/c05.03/source/kernel/include"
 				}
 			],
 			"language" : "C",
 			"sourceIndexes" : 
 			[
-				1
+				1,
+				4
 			]
 		}
 	],
-	"id" : "boot::@a4fbfdde3044a49ad01d",
+	"id" : "kernel::@483af936ae9a949d521e",
 	"link" : 
 	{
 		"commandFragments" : 
@@ -101,18 +102,18 @@
 				"role" : "flags"
 			},
 			{
-				"fragment" : "-m elf_i386  -Ttext=0x7c00  --section-start boot_end=0x7dfe",
+				"fragment" : "-m elf_i386 -T /Users/gaolisha/workspace/diy-x86os-master/code/c05.03/source/kernel/kernel.lds",
 				"role" : "flags"
 			}
 		],
 		"language" : "C"
 	},
-	"name" : "boot",
-	"nameOnDisk" : "boot",
+	"name" : "kernel",
+	"nameOnDisk" : "kernel",
 	"paths" : 
 	{
-		"build" : "source/boot",
-		"source" : "source/boot"
+		"build" : "source/kernel",
+		"source" : "source/kernel"
 	},
 	"sourceGroups" : 
 	[
@@ -127,14 +128,17 @@
 			"name" : "Source Files",
 			"sourceIndexes" : 
 			[
-				1
+				1,
+				4
 			]
 		},
 		{
 			"name" : "Header Files",
 			"sourceIndexes" : 
 			[
-				2
+				2,
+				3,
+				5
 			]
 		}
 	],
@@ -143,18 +147,34 @@
 		{
 			"backtrace" : 1,
 			"compileGroupIndex" : 0,
-			"path" : "source/boot/start.S",
+			"path" : "source/kernel/init/start.S",
 			"sourceGroupIndex" : 0
 		},
 		{
 			"backtrace" : 1,
 			"compileGroupIndex" : 1,
-			"path" : "source/boot/boot.c",
+			"path" : "source/kernel/cpu/cpu.c",
 			"sourceGroupIndex" : 1
 		},
 		{
 			"backtrace" : 1,
-			"path" : "source/boot/boot.h",
+			"path" : "source/kernel/include/cpu/cpu.h",
+			"sourceGroupIndex" : 2
+		},
+		{
+			"backtrace" : 1,
+			"path" : "source/kernel/include/os_cfg.h",
+			"sourceGroupIndex" : 2
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 1,
+			"path" : "source/kernel/init/init.c",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 1,
+			"path" : "source/kernel/init/init.h",
 			"sourceGroupIndex" : 2
 		}
 	],

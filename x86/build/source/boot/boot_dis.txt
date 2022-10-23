@@ -1,6 +1,6 @@
 
-/Users/gaolisha/workspace/os/x86/build/source/boot/boot.elf:     file format elf32-i386
-/Users/gaolisha/workspace/os/x86/build/source/boot/boot.elf
+/Users/gaolisha/workspace/diy-x86os-master/code/c05.03/build/source/boot/boot.elf:     file format elf32-i386
+/Users/gaolisha/workspace/diy-x86os-master/code/c05.03/build/source/boot/boot.elf
 architecture: i386, flags 0x00000112:
 EXEC_P, HAS_SYMS, D_PAGED
 start address 0x00007c00
@@ -29,9 +29,9 @@ Idx Name          Size      VMA       LMA       File off  Algn
                   CONTENTS, READONLY, DEBUGGING, OCTETS
   7 .debug_frame  00000034  00000000  00000000  00000fa4  2**2
                   CONTENTS, READONLY, DEBUGGING, OCTETS
-  8 .debug_str    000000ec  00000000  00000000  00000fd8  2**0
+  8 .debug_str    00000118  00000000  00000000  00000fd8  2**0
                   CONTENTS, READONLY, DEBUGGING, OCTETS
-  9 .debug_line_str 00000090  00000000  00000000  000010c4  2**0
+  9 .debug_line_str 000000d2  00000000  00000000  000010f0  2**0
                   CONTENTS, READONLY, DEBUGGING, OCTETS
 SYMBOL TABLE:
 00000000 l    df *ABS*	00000000 start.S.o

@@ -1,4 +1,4 @@
-# Install script for directory: /Users/gaolisha/workspace/os/x86
+# Install script for directory: /Users/gaolisha/workspace/diy-x86os-master/code/c05.03
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -39,9 +39,9 @@ endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for each subdirectory.
-  include("/Users/gaolisha/workspace/os/x86/build/source/boot/cmake_install.cmake")
-  include("/Users/gaolisha/workspace/os/x86/build/source/loader/cmake_install.cmake")
-  include("/Users/gaolisha/workspace/os/x86/build/source/kernel/cmake_install.cmake")
+  include("/Users/gaolisha/workspace/diy-x86os-master/code/c05.03/build/source/boot/cmake_install.cmake")
+  include("/Users/gaolisha/workspace/diy-x86os-master/code/c05.03/build/source/loader/cmake_install.cmake")
+  include("/Users/gaolisha/workspace/diy-x86os-master/code/c05.03/build/source/kernel/cmake_install.cmake")
 
 endif()
 
@@ -53,5 +53,5 @@ endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
-file(WRITE "/Users/gaolisha/workspace/os/x86/build/${CMAKE_INSTALL_MANIFEST}"
+file(WRITE "/Users/gaolisha/workspace/diy-x86os-master/code/c05.03/build/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")

@@ -1,43 +1,43 @@
 
-/Users/gaolisha/workspace/os/x86/build/source/loader/loader.elf:     file format elf32-i386
-/Users/gaolisha/workspace/os/x86/build/source/loader/loader.elf
+/Users/gaolisha/workspace/diy-x86os-master/code/c05.03/build/source/loader/loader.elf:     file format elf32-i386
+/Users/gaolisha/workspace/diy-x86os-master/code/c05.03/build/source/loader/loader.elf
 architecture: i386, flags 0x00000112:
 EXEC_P, HAS_SYMS, D_PAGED
 start address 0x00008000
 
 Program Header:
     LOAD off    0x00000000 vaddr 0x00007000 paddr 0x00007000 align 2**12
-         filesz 0x00001664 memsz 0x00001664 flags r-x
-    LOAD off    0x00001664 vaddr 0x00009664 paddr 0x00009664 align 2**12
-         filesz 0x00000018 memsz 0x00000070 flags rw-
+         filesz 0x00001660 memsz 0x00001660 flags r-x
+    LOAD off    0x00001660 vaddr 0x00009660 paddr 0x00009660 align 2**12
+         filesz 0x00000018 memsz 0x00000074 flags rw-
 
 Sections:
 Idx Name          Size      VMA       LMA       File off  Algn
-  0 .text         0000062b  00008000  00008000  00001000  2**0
+  0 .text         00000627  00008000  00008000  00001000  2**0
                   CONTENTS, ALLOC, LOAD, READONLY, CODE
-  1 .rodata       00000039  0000862b  0000862b  0000162b  2**0
+  1 .rodata       00000039  00008627  00008627  00001627  2**0
                   CONTENTS, ALLOC, LOAD, READONLY, DATA
-  2 .data         00000018  00009664  00009664  00001664  2**2
+  2 .data         00000018  00009660  00009660  00001660  2**2
                   CONTENTS, ALLOC, LOAD, DATA
-  3 .bss          00000054  00009680  00009680  0000167c  2**5
+  3 .bss          00000054  00009680  00009680  00001678  2**5
                   ALLOC
-  4 .comment      00000012  00000000  00000000  0000167c  2**0
+  4 .comment      00000012  00000000  00000000  00001678  2**0
                   CONTENTS, READONLY
   5 .debug_aranges 00000060  00000000  00000000  00001690  2**3
                   CONTENTS, READONLY, DEBUGGING, OCTETS
-  6 .debug_info   000008bc  00000000  00000000  000016f0  2**0
+  6 .debug_info   000008d4  00000000  00000000  000016f0  2**0
                   CONTENTS, READONLY, DEBUGGING, OCTETS
-  7 .debug_abbrev 00000378  00000000  00000000  00001fac  2**0
+  7 .debug_abbrev 0000038f  00000000  00000000  00001fc4  2**0
                   CONTENTS, READONLY, DEBUGGING, OCTETS
-  8 .debug_line   000003dc  00000000  00000000  00002324  2**0
+  8 .debug_line   000003f1  00000000  00000000  00002353  2**0
                   CONTENTS, READONLY, DEBUGGING, OCTETS
-  9 .debug_frame  00000260  00000000  00000000  00002700  2**2
+  9 .debug_frame  00000260  00000000  00000000  00002744  2**2
                   CONTENTS, READONLY, DEBUGGING, OCTETS
- 10 .debug_str    000003de  00000000  00000000  00002960  2**0
+ 10 .debug_str    0000040d  00000000  00000000  000029a4  2**0
                   CONTENTS, READONLY, DEBUGGING, OCTETS
- 11 .debug_line_str 00000130  00000000  00000000  00002d3e  2**0
+ 11 .debug_line_str 0000019e  00000000  00000000  00002db1  2**0
                   CONTENTS, READONLY, DEBUGGING, OCTETS
- 12 .debug_rnglists 00000017  00000000  00000000  00002e6e  2**0
+ 12 .debug_rnglists 00000017  00000000  00000000  00002f4f  2**0
                   CONTENTS, READONLY, DEBUGGING, OCTETS
 SYMBOL TABLE:
 00000000 l    df *ABS*	00000000 loader_16.c
@@ -50,22 +50,22 @@ SYMBOL TABLE:
 000080dc l     F .text	0000002b far_jump
 00008107 l     F .text	0000003c show_msg
 00008143 l     F .text	00000139 detect_memory
-0000827c l     F .text	00000096 enter_protect_mode
+0000827c l     F .text	00000092 enter_protect_mode
 00000000 l    df *ABS*	00000000 loader_32.c
-00008335 l     F .text	0000001d inb
-00008352 l     F .text	0000001f outb
-00008371 l     F .text	0000001f inw
-00008390 l     F .text	00000130 read_disk
-000084c0 l     F .text	0000011a reload_elf_file
-000085da l     F .text	00000005 die
-00008312 g     F .text	00000023 loader_entry
-00009664 g     O .data	00000018 gdt_table
-000085df g     F .text	0000004c load_kernel
+00008331 l     F .text	0000001d inb
+0000834e l     F .text	0000001f inw
+0000836d l     F .text	0000001f outb
+0000838c l     F .text	00000130 read_disk
+000084bc l     F .text	0000011a reload_elf_file
+000085d6 l     F .text	00000005 die
+0000830e g     F .text	00000023 loader_entry
+00009660 g     O .data	00000018 gdt_table
+000085db g     F .text	0000004c load_kernel
 00009680 g     O .bss	00000054 boot_info
 00008000 g       .text	00000000 _start
-0000967c g       .bss	00000000 __bss_start
+00009678 g       .bss	00000000 __bss_start
 00008003 g       .text	00000000 protect_mode_entry
-0000967c g       .data	00000000 _edata
+00009678 g       .data	00000000 _edata
 000096d4 g       .bss	00000000 _end
 
 
@@ -79,55 +79,62 @@ _start:
 	// 你可能会想，直接跳到loader_entry，但这样需要先知识loader_entry在哪儿
 	// boot没有这个能力做到，所以直接用汇编，以便_start处于整个bin文件开头，这样boot直接跳到开头就可以
 	jmp loader_entry
-    8000:	e9 0f 03             	jmp    8312 <loader_entry>
+    8000:	e9 0b 03             	jmp    830e <loader_entry>
 
 00008003 <protect_mode_entry>:
-	.code32
 	.text
 	.global protect_mode_entry
 	.extern load_kernel
 protect_mode_entry:
-	mov $16, %ax
+	// 重新加载所有的数据段描述符
+	mov $16, %ax		// 16为数据段选择子
     8003:	66 b8 10 00 8e d8    	mov    $0xd88e0010,%eax
 	mov %ax, %ds
-	mov %ax, %ss
+    mov %ax, %ss
     8009:	8e d0                	mov    %ax,%ss
-	mov %ax, %es
+    mov %ax, %es
     800b:	8e c0                	mov    %ax,%es
-	mov %ax, %fs
+    mov %ax, %fs
     800d:	8e e0                	mov    %ax,%fs
-	mov %ax, %gs
+    mov %ax, %gs
     800f:	8e e8                	mov    %ax,%gs
-	jmp $8, $load_kernel
-    8011:	ea df 85 00 00       	ljmp   $0x0,$0x85df
+
+    // 长跳转进入到32位内核加载模式中
+    jmp $8, $load_kernel
+    8011:	ea db 85 00 00       	ljmp   $0x0,$0x85db
     8016:	08 00                	or     %al,(%bx,%si)
 
 00008018 <inb>:
 #ifndef CPU_INSTR_H
 #define CPU_INSTR_H
 
-static inline uint8_t inb (uint16_t port) {
+#include "types.h"
+
+static inline uint8_t inb(uint16_t  port) {
     8018:	66 55                	push   %ebp
     801a:	66 89 e5             	mov    %esp,%ebp
     801d:	66 83 ec 14          	sub    $0x14,%esp
     8021:	67 66 8b 45 08       	mov    0x8(%ebp),%eax
     8026:	67 89 45 ec          	mov    %ax,-0x14(%ebp)
-    uint8_t rv;
-    // inb al, dx
-    __asm__ __volatile__("inb %[p],%[v]":[v]"=a"(rv) : [p]"d"(port));
+	uint8_t rv;
+	__asm__ __volatile__("inb %[p], %[v]" : [v]"=a" (rv) : [p]"d"(port));
     802a:	67 66 0f b7 45 ec    	movzwl -0x14(%ebp),%eax
     8030:	66 89 c2             	mov    %eax,%edx
     8033:	ec                   	in     (%dx),%al
     8034:	67 88 45 ff          	mov    %al,-0x1(%ebp)
-    return rv;
+	return rv;
     8038:	67 66 0f b6 45 ff    	movzbl -0x1(%ebp),%eax
 }
     803e:	66 c9                	leavel
     8040:	66 c3                	retl
 
 00008042 <outb>:
+	uint16_t rv;
+	__asm__ __volatile__("in %1, %0" : "=a" (rv) : "dN" (port));
+	return rv;
+}
 
-static inline void outb (uint16_t port, uint8_t data) {
+static inline void outb(uint16_t port, uint8_t data) {
     8042:	66 55                	push   %ebp
     8044:	66 89 e5             	mov    %esp,%ebp
     8047:	66 83 ec 08          	sub    $0x8,%esp
@@ -135,8 +142,7 @@ static inline void outb (uint16_t port, uint8_t data) {
     8050:	67 66 8b 45 0c       	mov    0xc(%ebp),%eax
     8055:	67 89 55 fc          	mov    %dx,-0x4(%ebp)
     8059:	67 88 45 f8          	mov    %al,-0x8(%ebp)
-    // outb al, dx
-    __asm__ __volatile__("outb %[v], %[p]"::[p]"d"(port), [v]"a"(data));
+	__asm__ __volatile__("outb %[v], %[p]" : : [p]"d" (port), [v]"a" (data));
     805d:	67 66 0f b7 55 fc    	movzwl -0x4(%ebp),%edx
     8063:	67 66 0f b6 45 f8    	movzbl -0x8(%ebp),%eax
     8069:	ee                   	out    %al,(%dx)
@@ -146,15 +152,11 @@ static inline void outb (uint16_t port, uint8_t data) {
     806d:	66 c3                	retl
 
 0000806f <cli>:
-    // inb ax, dx
-    __asm__ __volatile__("in %[p],%[v]":[v]"=a"(rv) : [p]"d"(port));
-    return rv;
-}
 
-static inline void cli (void) {
+static inline void cli() {
     806f:	66 55                	push   %ebp
     8071:	66 89 e5             	mov    %esp,%ebp
-    __asm__ __volatile__("cli");
+	__asm__ __volatile__("cli");
     8074:	fa                   	cli
 }
     8075:	90                   	nop
@@ -163,31 +165,32 @@ static inline void cli (void) {
 
 0000807a <lgdt>:
 
-static inline void sti (void) {
-    __asm__ __volatile__("sti");
+static inline void sti() {
+	__asm__ __volatile__("sti");
 }
 
-static inline void lgdt (uint32_t start, uint32_t size) {
+static inline void lgdt(uint32_t start, uint32_t size) {
     807a:	66 55                	push   %ebp
     807c:	66 89 e5             	mov    %esp,%ebp
     807f:	66 83 ec 10          	sub    $0x10,%esp
-    struct {
-        uint16_t limit;
-        uint16_t start_15_0;
-        uint16_t start_31_16;
-    }gdt;
-    gdt.start_31_16 = start >> 16;
+		uint16_t limit;
+		uint16_t start15_0;
+		uint16_t start31_16;
+	} gdt;
+
+	gdt.start31_16 = start >> 16;
     8083:	67 66 8b 45 08       	mov    0x8(%ebp),%eax
     8088:	66 c1 e8 10          	shr    $0x10,%eax
     808c:	67 89 45 fe          	mov    %ax,-0x2(%ebp)
-    gdt.start_15_0 = start & 0xFFFF;
+	gdt.start15_0 = start & 0xFFFF;
     8090:	67 66 8b 45 08       	mov    0x8(%ebp),%eax
     8095:	67 89 45 fc          	mov    %ax,-0x4(%ebp)
-    gdt.limit = size - 1;
+	gdt.limit = size - 1;
     8099:	67 66 8b 45 0c       	mov    0xc(%ebp),%eax
     809e:	66 83 e8 01          	sub    $0x1,%eax
     80a2:	67 89 45 fa          	mov    %ax,-0x6(%ebp)
-    __asm__ __volatile__("lgdt %[g]"::[g]"m"(gdt));
+
+	__asm__ __volatile__("lgdt %[g]"::[g]"m"(gdt));
     80a6:	67 0f 01 55 fa       	lgdtw  -0x6(%ebp)
 }
     80ab:	90                   	nop
@@ -196,15 +199,15 @@ static inline void lgdt (uint32_t start, uint32_t size) {
 
 000080b0 <read_cr0>:
 
-static inline uint16_t read_cr0 (void) {
+static inline uint32_t read_cr0() {
     80b0:	66 55                	push   %ebp
     80b2:	66 89 e5             	mov    %esp,%ebp
     80b5:	66 83 ec 10          	sub    $0x10,%esp
-    uint32_t cr0;
-    __asm__ __volatile__("mov %%cr0, %[v]":[v]"=r"(cr0));
+	uint32_t cr0;
+	__asm__ __volatile__("mov %%cr0, %[v]":[v]"=r"(cr0));
     80b9:	0f 20 c0             	mov    %cr0,%eax
     80bc:	67 66 89 45 fc       	mov    %eax,-0x4(%ebp)
-    return cr0;
+	return cr0;
     80c1:	67 66 8b 45 fc       	mov    -0x4(%ebp),%eax
 }
     80c6:	66 c9                	leavel
@@ -212,10 +215,10 @@ static inline uint16_t read_cr0 (void) {
 
 000080ca <write_cr0>:
 
-static inline void write_cr0 (uint32_t v) {
+static inline void write_cr0(uint32_t v) {
     80ca:	66 55                	push   %ebp
     80cc:	66 89 e5             	mov    %esp,%ebp
-    __asm__ __volatile("mov %[v], %%cr0"::[v]"r"(v));
+	__asm__ __volatile__("mov %[v], %%cr0"::[v]"r"(v));
     80cf:	67 66 8b 45 08       	mov    0x8(%ebp),%eax
     80d4:	0f 22 c0             	mov    %eax,%cr0
 }
@@ -225,16 +228,16 @@ static inline void write_cr0 (uint32_t v) {
 
 000080dc <far_jump>:
 
-static inline void far_jump (uint32_t selector, uint32_t offset) {
+static inline void far_jump(uint32_t selector, uint32_t offset) {
     80dc:	66 55                	push   %ebp
     80de:	66 89 e5             	mov    %esp,%ebp
     80e1:	66 83 ec 10          	sub    $0x10,%esp
-    uint32_t addr[] = {offset, selector};
+	uint32_t addr[] = {offset, selector };
     80e5:	67 66 8b 45 0c       	mov    0xc(%ebp),%eax
     80ea:	67 66 89 45 f8       	mov    %eax,-0x8(%ebp)
     80ef:	67 66 8b 45 08       	mov    0x8(%ebp),%eax
     80f4:	67 66 89 45 fc       	mov    %eax,-0x4(%ebp)
-    __asm__ __volatile("ljmpl *(%[a])"::[a]"r"(addr));
+	__asm__ __volatile__("ljmpl *(%[a])"::[a]"r"(addr));
     80f9:	67 66 8d 45 f8       	lea    -0x8(%ebp),%eax
     80fe:	67 66 ff 28          	ljmpl  *(%eax)
 }
@@ -299,7 +302,7 @@ static void  detect_memory(void) {
 	int signature, bytes;
 
     show_msg("try to detect memory:");
-    815b:	66 68 2b 86 00 00    	pushl  $0x862b
+    815b:	66 68 27 86 00 00    	pushl  $0x8627
     8161:	66 e8 a0 ff ff ff    	calll  8107 <show_msg>
     8167:	66 83 c4 04          	add    $0x4,%esp
 
@@ -336,7 +339,7 @@ static void  detect_memory(void) {
     81c4:	4d 53 
     81c6:	74 13                	je     81db <detect_memory+0x98>
             show_msg("failed.\r\n");
-    81c8:	66 68 41 86 00 00    	pushl  $0x8641
+    81c8:	66 68 3d 86 00 00    	pushl  $0x863d
     81ce:	66 e8 33 ff ff ff    	calll  8107 <show_msg>
     81d4:	66 83 c4 04          	add    $0x4,%esp
     81d8:	e9 92 00             	jmp    826d <detect_memory+0x12a>
@@ -395,7 +398,7 @@ static void  detect_memory(void) {
 		}
 	}
     show_msg("ok.\r\n");
-    825d:	66 68 4b 86 00 00    	pushl  $0x864b
+    825d:	66 68 47 86 00 00    	pushl  $0x8647
     8263:	66 e8 9e fe ff ff    	calll  8107 <show_msg>
     8269:	66 83 c4 04          	add    $0x4,%esp
 }
@@ -407,23 +410,27 @@ static void  detect_memory(void) {
     827a:	66 c3                	retl
 
 0000827c <enter_protect_mode>:
-	{0, 0, 0, 0},
-	{0xFFFF, 0x0000, 0x9a00, 0x00CF},
-	{0xFFFF, 0x0000, 0x9200, 0x00CF},
 };
 
-static void enter_protect_mode(void) {
+/**
+ * 进入保护模式
+ */
+static void  enter_protect_mode() {
     827c:	66 55                	push   %ebp
     827e:	66 89 e5             	mov    %esp,%ebp
     8281:	66 83 ec 10          	sub    $0x10,%esp
-	cli();
+    // 关中断
+    cli();
     8285:	66 e8 e4 fd ff ff    	calll  806f <cli>
-	uint8_t v = inb(0x92);
+
+    // 开启A20地址线，使得可访问1M以上空间
+    // 使用的是Fast A20 Gate方式，见https://wiki.osdev.org/A20#Fast_A20_Gate
+    uint8_t v = inb(0x92);
     828b:	66 68 92 00 00 00    	pushl  $0x92
     8291:	66 e8 81 fd ff ff    	calll  8018 <inb>
     8297:	66 83 c4 04          	add    $0x4,%esp
     829b:	67 88 45 ff          	mov    %al,-0x1(%ebp)
-	outb(0x92, v | 0x02);
+    outb(0x92, v | 0x2);
     829f:	67 66 0f b6 45 ff    	movzbl -0x1(%ebp),%eax
     82a5:	66 83 c8 02          	or     $0x2,%eax
     82a9:	66 0f b6 c0          	movzbl %al,%eax
@@ -431,439 +438,470 @@ static void enter_protect_mode(void) {
     82af:	66 68 92 00 00 00    	pushl  $0x92
     82b5:	66 e8 87 fd ff ff    	calll  8042 <outb>
     82bb:	66 83 c4 08          	add    $0x8,%esp
-	lgdt((uint32_t)gdt_table, sizeof(gdt_table));
-    82bf:	66 b8 64 96 00 00    	mov    $0x9664,%eax
+
+    // 加载GDT。由于中断已经关掉，IDT不需要加载
+    lgdt((uint32_t)gdt_table, sizeof(gdt_table));
+    82bf:	66 b8 60 96 00 00    	mov    $0x9660,%eax
     82c5:	66 6a 18             	pushl  $0x18
     82c8:	66 50                	push   %eax
     82ca:	66 e8 aa fd ff ff    	calll  807a <lgdt>
     82d0:	66 83 c4 08          	add    $0x8,%esp
-	uint32_t cr0 = read_cr0();
-    82d4:	66 e8 d6 fd ff ff    	calll  80b0 <read_cr0>
-    82da:	66 0f b7 c0          	movzwl %ax,%eax
-    82de:	67 66 89 45 f8       	mov    %eax,-0x8(%ebp)
-	write_cr0(cr0 | (1 << 0));
-    82e3:	67 66 8b 45 f8       	mov    -0x8(%ebp),%eax
-    82e8:	66 83 c8 01          	or     $0x1,%eax
-    82ec:	66 50                	push   %eax
-    82ee:	66 e8 d6 fd ff ff    	calll  80ca <write_cr0>
-    82f4:	66 83 c4 04          	add    $0x4,%esp
-	far_jump(8, (uint32_t) protect_mode_entry);
-    82f8:	66 b8 03 80 00 00    	mov    $0x8003,%eax
-    82fe:	66 50                	push   %eax
-    8300:	66 6a 08             	pushl  $0x8
-    8303:	66 e8 d3 fd ff ff    	calll  80dc <far_jump>
-    8309:	66 83 c4 08          	add    $0x8,%esp
-}
-    830d:	90                   	nop
-    830e:	66 c9                	leavel
-    8310:	66 c3                	retl
 
-00008312 <loader_entry>:
+    // 打开CR0的保护模式位，进入保持模式
+    uint32_t cr0 = read_cr0();
+    82d4:	66 e8 d6 fd ff ff    	calll  80b0 <read_cr0>
+    82da:	67 66 89 45 f8       	mov    %eax,-0x8(%ebp)
+    write_cr0(cr0 | (1 << 0));
+    82df:	67 66 8b 45 f8       	mov    -0x8(%ebp),%eax
+    82e4:	66 83 c8 01          	or     $0x1,%eax
+    82e8:	66 50                	push   %eax
+    82ea:	66 e8 da fd ff ff    	calll  80ca <write_cr0>
+    82f0:	66 83 c4 04          	add    $0x4,%esp
+
+
+    // 长跳转进入到保护模式
+    // 使用长跳转，以便清空流水线，将里面的16位代码给清空
+    far_jump(8, (uint32_t)protect_mode_entry);
+    82f4:	66 b8 03 80 00 00    	mov    $0x8003,%eax
+    82fa:	66 50                	push   %eax
+    82fc:	66 6a 08             	pushl  $0x8
+    82ff:	66 e8 d7 fd ff ff    	calll  80dc <far_jump>
+    8305:	66 83 c4 08          	add    $0x8,%esp
+}
+    8309:	90                   	nop
+    830a:	66 c9                	leavel
+    830c:	66 c3                	retl
+
+0000830e <loader_entry>:
 
 void loader_entry(void) {
-    8312:	66 55                	push   %ebp
-    8314:	66 89 e5             	mov    %esp,%ebp
+    830e:	66 55                	push   %ebp
+    8310:	66 89 e5             	mov    %esp,%ebp
     show_msg("....loading.....\r\n");
-    8317:	66 68 51 86 00 00    	pushl  $0x8651
-    831d:	66 e8 e4 fd ff ff    	calll  8107 <show_msg>
-    8323:	66 83 c4 04          	add    $0x4,%esp
+    8313:	66 68 4d 86 00 00    	pushl  $0x864d
+    8319:	66 e8 e8 fd ff ff    	calll  8107 <show_msg>
+    831f:	66 83 c4 04          	add    $0x4,%esp
 	detect_memory();
-    8327:	66 e8 16 fe ff ff    	calll  8143 <detect_memory>
-	enter_protect_mode();
-    832d:	66 e8 49 ff ff ff    	calll  827c <enter_protect_mode>
+    8323:	66 e8 1a fe ff ff    	calll  8143 <detect_memory>
+    enter_protect_mode();
+    8329:	66 e8 4d ff ff ff    	calll  827c <enter_protect_mode>
     for(;;) {}
-    8333:	eb fe                	jmp    8333 <loader_entry+0x21>
+    832f:	eb fe                	jmp    832f <loader_entry+0x21>
 
-00008335 <inb>:
-static inline uint8_t inb (uint16_t port) {
-    8335:	55                   	push   %bp
-    8336:	89 e5                	mov    %sp,%bp
-    8338:	83 ec 14             	sub    $0x14,%sp
-    833b:	8b 45 08             	mov    0x8(%di),%ax
-    833e:	66 89 45 ec          	mov    %eax,-0x14(%di)
-    __asm__ __volatile__("inb %[p],%[v]":[v]"=a"(rv) : [p]"d"(port));
-    8342:	0f b7 45 ec          	movzww -0x14(%di),%ax
-    8346:	89 c2                	mov    %ax,%dx
-    8348:	ec                   	in     (%dx),%al
-    8349:	88 45 ff             	mov    %al,-0x1(%di)
-    return rv;
-    834c:	0f b6 45 ff          	movzbw -0x1(%di),%ax
+00008331 <inb>:
+static inline uint8_t inb(uint16_t  port) {
+    8331:	55                   	push   %bp
+    8332:	89 e5                	mov    %sp,%bp
+    8334:	83 ec 14             	sub    $0x14,%sp
+    8337:	8b 45 08             	mov    0x8(%di),%ax
+    833a:	66 89 45 ec          	mov    %eax,-0x14(%di)
+	__asm__ __volatile__("inb %[p], %[v]" : [v]"=a" (rv) : [p]"d"(port));
+    833e:	0f b7 45 ec          	movzww -0x14(%di),%ax
+    8342:	89 c2                	mov    %ax,%dx
+    8344:	ec                   	in     (%dx),%al
+    8345:	88 45 ff             	mov    %al,-0x1(%di)
+	return rv;
+    8348:	0f b6 45 ff          	movzbw -0x1(%di),%ax
 }
-    8350:	c9                   	leave
-    8351:	c3                   	ret
+    834c:	c9                   	leave
+    834d:	c3                   	ret
 
-00008352 <outb>:
-static inline void outb (uint16_t port, uint8_t data) {
-    8352:	55                   	push   %bp
-    8353:	89 e5                	mov    %sp,%bp
-    8355:	83 ec 08             	sub    $0x8,%sp
-    8358:	8b 55 08             	mov    0x8(%di),%dx
-    835b:	8b 45 0c             	mov    0xc(%di),%ax
-    835e:	66 89 55 fc          	mov    %edx,-0x4(%di)
-    8362:	88 45 f8             	mov    %al,-0x8(%di)
-    __asm__ __volatile__("outb %[v], %[p]"::[p]"d"(port), [v]"a"(data));
-    8365:	0f b7 55 fc          	movzww -0x4(%di),%dx
-    8369:	0f b6 45 f8          	movzbw -0x8(%di),%ax
-    836d:	ee                   	out    %al,(%dx)
+0000834e <inw>:
+static inline uint16_t inw(uint16_t  port) {
+    834e:	55                   	push   %bp
+    834f:	89 e5                	mov    %sp,%bp
+    8351:	83 ec 14             	sub    $0x14,%sp
+    8354:	8b 45 08             	mov    0x8(%di),%ax
+    8357:	66 89 45 ec          	mov    %eax,-0x14(%di)
+	__asm__ __volatile__("in %1, %0" : "=a" (rv) : "dN" (port));
+    835b:	0f b7 45 ec          	movzww -0x14(%di),%ax
+    835f:	89 c2                	mov    %ax,%dx
+    8361:	66 ed                	in     (%dx),%eax
+    8363:	66 89 45 fe          	mov    %eax,-0x2(%di)
+	return rv;
+    8367:	0f b7 45 fe          	movzww -0x2(%di),%ax
 }
-    836e:	90                   	nop
-    836f:	c9                   	leave
-    8370:	c3                   	ret
+    836b:	c9                   	leave
+    836c:	c3                   	ret
 
-00008371 <inw>:
-static inline uint16_t inw (uint16_t port) {
-    8371:	55                   	push   %bp
-    8372:	89 e5                	mov    %sp,%bp
-    8374:	83 ec 14             	sub    $0x14,%sp
-    8377:	8b 45 08             	mov    0x8(%di),%ax
-    837a:	66 89 45 ec          	mov    %eax,-0x14(%di)
-    __asm__ __volatile__("in %[p],%[v]":[v]"=a"(rv) : [p]"d"(port));
-    837e:	0f b7 45 ec          	movzww -0x14(%di),%ax
-    8382:	89 c2                	mov    %ax,%dx
-    8384:	66 ed                	in     (%dx),%eax
-    8386:	66 89 45 fe          	mov    %eax,-0x2(%di)
-    return rv;
-    838a:	0f b7 45 fe          	movzww -0x2(%di),%ax
+0000836d <outb>:
+static inline void outb(uint16_t port, uint8_t data) {
+    836d:	55                   	push   %bp
+    836e:	89 e5                	mov    %sp,%bp
+    8370:	83 ec 08             	sub    $0x8,%sp
+    8373:	8b 55 08             	mov    0x8(%di),%dx
+    8376:	8b 45 0c             	mov    0xc(%di),%ax
+    8379:	66 89 55 fc          	mov    %edx,-0x4(%di)
+    837d:	88 45 f8             	mov    %al,-0x8(%di)
+	__asm__ __volatile__("outb %[v], %[p]" : : [p]"d" (port), [v]"a" (data));
+    8380:	0f b7 55 fc          	movzww -0x4(%di),%dx
+    8384:	0f b6 45 f8          	movzbw -0x8(%di),%ax
+    8388:	ee                   	out    %al,(%dx)
 }
-    838e:	c9                   	leave
-    838f:	c3                   	ret
+    8389:	90                   	nop
+    838a:	c9                   	leave
+    838b:	c3                   	ret
 
-00008390 <read_disk>:
-
-#include "loader.h"
+0000838c <read_disk>:
 #include "comm/elf.h"
 
-static void read_disk (uint32_t sector, int sector_count, uint8_t* buf) {
-    8390:	55                   	push   %bp
-    8391:	89 e5                	mov    %sp,%bp
-    8393:	53                   	push   %bx
-    8394:	83 ec 10             	sub    $0x10,%sp
+/**
+* 使用LBA48位模式读取磁盘
+*/
+static void read_disk(int sector, int sector_count, uint8_t * buf) {
+    838c:	55                   	push   %bp
+    838d:	89 e5                	mov    %sp,%bp
+    838f:	53                   	push   %bx
+    8390:	83 ec 10             	sub    $0x10,%sp
     outb(0x1F6, (uint8_t) (0xE0));
-    8397:	68 e0 00             	push   $0xe0
-    839a:	00 00                	add    %al,(%bx,%si)
-    839c:	68 f6 01             	push   $0x1f6
-    839f:	00 00                	add    %al,(%bx,%si)
-    83a1:	e8 ac ff             	call   8350 <inb+0x1b>
-    83a4:	ff                   	(bad)
-    83a5:	ff 83 c4 08          	incw   0x8c4(%bp,%di)
+    8393:	68 e0 00             	push   $0xe0
+    8396:	00 00                	add    %al,(%bx,%si)
+    8398:	68 f6 01             	push   $0x1f6
+    839b:	00 00                	add    %al,(%bx,%si)
+    839d:	e8 cb ff             	call   836b <inw+0x1d>
+    83a0:	ff                   	(bad)
+    83a1:	ff 83 c4 08          	incw   0x8c4(%bp,%di)
 
 	outb(0x1F2, (uint8_t) (sector_count >> 8));
-    83a9:	8b 45 0c             	mov    0xc(%di),%ax
-    83ac:	c1 f8 08             	sar    $0x8,%ax
-    83af:	0f b6 c0             	movzbw %al,%ax
-    83b2:	50                   	push   %ax
-    83b3:	68 f2 01             	push   $0x1f2
-    83b6:	00 00                	add    %al,(%bx,%si)
-    83b8:	e8 95 ff             	call   8350 <inb+0x1b>
-    83bb:	ff                   	(bad)
-    83bc:	ff 83 c4 08          	incw   0x8c4(%bp,%di)
+    83a5:	8b 45 0c             	mov    0xc(%di),%ax
+    83a8:	c1 f8 08             	sar    $0x8,%ax
+    83ab:	0f b6 c0             	movzbw %al,%ax
+    83ae:	50                   	push   %ax
+    83af:	68 f2 01             	push   $0x1f2
+    83b2:	00 00                	add    %al,(%bx,%si)
+    83b4:	e8 b4 ff             	call   836b <inw+0x1d>
+    83b7:	ff                   	(bad)
+    83b8:	ff 83 c4 08          	incw   0x8c4(%bp,%di)
     outb(0x1F3, (uint8_t) (sector >> 24));		// LBA参数的24~31位
-    83c0:	8b 45 08             	mov    0x8(%di),%ax
-    83c3:	c1 e8 18             	shr    $0x18,%ax
-    83c6:	0f b6 c0             	movzbw %al,%ax
-    83c9:	50                   	push   %ax
-    83ca:	68 f3 01             	push   $0x1f3
-    83cd:	00 00                	add    %al,(%bx,%si)
-    83cf:	e8 7e ff             	call   8350 <inb+0x1b>
-    83d2:	ff                   	(bad)
-    83d3:	ff 83 c4 08          	incw   0x8c4(%bp,%di)
+    83bc:	8b 45 08             	mov    0x8(%di),%ax
+    83bf:	c1 f8 18             	sar    $0x18,%ax
+    83c2:	0f b6 c0             	movzbw %al,%ax
+    83c5:	50                   	push   %ax
+    83c6:	68 f3 01             	push   $0x1f3
+    83c9:	00 00                	add    %al,(%bx,%si)
+    83cb:	e8 9d ff             	call   836b <inw+0x1d>
+    83ce:	ff                   	(bad)
+    83cf:	ff 83 c4 08          	incw   0x8c4(%bp,%di)
     outb(0x1F4, (uint8_t) (0));					// LBA参数的32~39位
-    83d7:	6a 00                	push   $0x0
-    83d9:	68 f4 01             	push   $0x1f4
-    83dc:	00 00                	add    %al,(%bx,%si)
-    83de:	e8 6f ff             	call   8350 <inb+0x1b>
-    83e1:	ff                   	(bad)
-    83e2:	ff 83 c4 08          	incw   0x8c4(%bp,%di)
+    83d3:	6a 00                	push   $0x0
+    83d5:	68 f4 01             	push   $0x1f4
+    83d8:	00 00                	add    %al,(%bx,%si)
+    83da:	e8 8e ff             	call   836b <inw+0x1d>
+    83dd:	ff                   	(bad)
+    83de:	ff 83 c4 08          	incw   0x8c4(%bp,%di)
     outb(0x1F5, (uint8_t) (0));					// LBA参数的40~47位
-    83e6:	6a 00                	push   $0x0
-    83e8:	68 f5 01             	push   $0x1f5
-    83eb:	00 00                	add    %al,(%bx,%si)
-    83ed:	e8 60 ff             	call   8350 <inb+0x1b>
-    83f0:	ff                   	(bad)
-    83f1:	ff 83 c4 08          	incw   0x8c4(%bp,%di)
+    83e2:	6a 00                	push   $0x0
+    83e4:	68 f5 01             	push   $0x1f5
+    83e7:	00 00                	add    %al,(%bx,%si)
+    83e9:	e8 7f ff             	call   836b <inw+0x1d>
+    83ec:	ff                   	(bad)
+    83ed:	ff 83 c4 08          	incw   0x8c4(%bp,%di)
 
     outb(0x1F2, (uint8_t) (sector_count));
-    83f5:	8b 45 0c             	mov    0xc(%di),%ax
-    83f8:	0f b6 c0             	movzbw %al,%ax
-    83fb:	50                   	push   %ax
-    83fc:	68 f2 01             	push   $0x1f2
-    83ff:	00 00                	add    %al,(%bx,%si)
-    8401:	e8 4c ff             	call   8350 <inb+0x1b>
-    8404:	ff                   	(bad)
-    8405:	ff 83 c4 08          	incw   0x8c4(%bp,%di)
+    83f1:	8b 45 0c             	mov    0xc(%di),%ax
+    83f4:	0f b6 c0             	movzbw %al,%ax
+    83f7:	50                   	push   %ax
+    83f8:	68 f2 01             	push   $0x1f2
+    83fb:	00 00                	add    %al,(%bx,%si)
+    83fd:	e8 6b ff             	call   836b <inw+0x1d>
+    8400:	ff                   	(bad)
+    8401:	ff 83 c4 08          	incw   0x8c4(%bp,%di)
 	outb(0x1F3, (uint8_t) (sector));			// LBA参数的0~7位
-    8409:	8b 45 08             	mov    0x8(%di),%ax
-    840c:	0f b6 c0             	movzbw %al,%ax
-    840f:	50                   	push   %ax
-    8410:	68 f3 01             	push   $0x1f3
-    8413:	00 00                	add    %al,(%bx,%si)
-    8415:	e8 38 ff             	call   8350 <inb+0x1b>
-    8418:	ff                   	(bad)
-    8419:	ff 83 c4 08          	incw   0x8c4(%bp,%di)
+    8405:	8b 45 08             	mov    0x8(%di),%ax
+    8408:	0f b6 c0             	movzbw %al,%ax
+    840b:	50                   	push   %ax
+    840c:	68 f3 01             	push   $0x1f3
+    840f:	00 00                	add    %al,(%bx,%si)
+    8411:	e8 57 ff             	call   836b <inw+0x1d>
+    8414:	ff                   	(bad)
+    8415:	ff 83 c4 08          	incw   0x8c4(%bp,%di)
 	outb(0x1F4, (uint8_t) (sector >> 8));		// LBA参数的8~15位
-    841d:	8b 45 08             	mov    0x8(%di),%ax
-    8420:	c1 e8 08             	shr    $0x8,%ax
-    8423:	0f b6 c0             	movzbw %al,%ax
-    8426:	50                   	push   %ax
-    8427:	68 f4 01             	push   $0x1f4
-    842a:	00 00                	add    %al,(%bx,%si)
-    842c:	e8 21 ff             	call   8350 <inb+0x1b>
-    842f:	ff                   	(bad)
-    8430:	ff 83 c4 08          	incw   0x8c4(%bp,%di)
+    8419:	8b 45 08             	mov    0x8(%di),%ax
+    841c:	c1 f8 08             	sar    $0x8,%ax
+    841f:	0f b6 c0             	movzbw %al,%ax
+    8422:	50                   	push   %ax
+    8423:	68 f4 01             	push   $0x1f4
+    8426:	00 00                	add    %al,(%bx,%si)
+    8428:	e8 40 ff             	call   836b <inw+0x1d>
+    842b:	ff                   	(bad)
+    842c:	ff 83 c4 08          	incw   0x8c4(%bp,%di)
 	outb(0x1F5, (uint8_t) (sector >> 16));		// LBA参数的16~23位
-    8434:	8b 45 08             	mov    0x8(%di),%ax
-    8437:	c1 e8 10             	shr    $0x10,%ax
-    843a:	0f b6 c0             	movzbw %al,%ax
-    843d:	50                   	push   %ax
-    843e:	68 f5 01             	push   $0x1f5
-    8441:	00 00                	add    %al,(%bx,%si)
-    8443:	e8 0a ff             	call   8350 <inb+0x1b>
-    8446:	ff                   	(bad)
-    8447:	ff 83 c4 08          	incw   0x8c4(%bp,%di)
+    8430:	8b 45 08             	mov    0x8(%di),%ax
+    8433:	c1 f8 10             	sar    $0x10,%ax
+    8436:	0f b6 c0             	movzbw %al,%ax
+    8439:	50                   	push   %ax
+    843a:	68 f5 01             	push   $0x1f5
+    843d:	00 00                	add    %al,(%bx,%si)
+    843f:	e8 29 ff             	call   836b <inw+0x1d>
+    8442:	ff                   	(bad)
+    8443:	ff 83 c4 08          	incw   0x8c4(%bp,%di)
 
 	outb(0x1F7, (uint8_t) 0x24);
-    844b:	6a 24                	push   $0x24
-    844d:	68 f7 01             	push   $0x1f7
-    8450:	00 00                	add    %al,(%bx,%si)
-    8452:	e8 fb fe             	call   8350 <inb+0x1b>
-    8455:	ff                   	(bad)
-    8456:	ff 83 c4 08          	incw   0x8c4(%bp,%di)
+    8447:	6a 24                	push   $0x24
+    8449:	68 f7 01             	push   $0x1f7
+    844c:	00 00                	add    %al,(%bx,%si)
+    844e:	e8 1a ff             	call   836b <inw+0x1d>
+    8451:	ff                   	(bad)
+    8452:	ff 83 c4 08          	incw   0x8c4(%bp,%di)
 
 	// 读取数据
 	uint16_t *data_buf = (uint16_t*) buf;
-    845a:	8b 45 10             	mov    0x10(%di),%ax
-    845d:	89 45 f8             	mov    %ax,-0x8(%di)
+    8456:	8b 45 10             	mov    0x10(%di),%ax
+    8459:	89 45 f8             	mov    %ax,-0x8(%di)
 	while (sector_count-- > 0) {
-    8460:	eb 4a                	jmp    84ac <read_disk+0x11c>
+    845c:	eb 4a                	jmp    84a8 <read_disk+0x11c>
 		// 每次扇区读之前都要检查，等待数据就绪
 		while ((inb(0x1F7) & 0x88) != 0x8) {}
-    8462:	90                   	nop
-    8463:	68 f7 01             	push   $0x1f7
-    8466:	00 00                	add    %al,(%bx,%si)
-    8468:	e8 c8 fe             	call   8333 <loader_entry+0x21>
-    846b:	ff                   	(bad)
-    846c:	ff 83 c4 04          	incw   0x4c4(%bp,%di)
-    8470:	0f b6 c0             	movzbw %al,%ax
-    8473:	25 88 00             	and    $0x88,%ax
-    8476:	00 00                	add    %al,(%bx,%si)
-    8478:	83 f8 08             	cmp    $0x8,%ax
-    847b:	75 e6                	jne    8463 <read_disk+0xd3>
+    845e:	90                   	nop
+    845f:	68 f7 01             	push   $0x1f7
+    8462:	00 00                	add    %al,(%bx,%si)
+    8464:	e8 c8 fe             	call   832f <loader_entry+0x21>
+    8467:	ff                   	(bad)
+    8468:	ff 83 c4 04          	incw   0x4c4(%bp,%di)
+    846c:	0f b6 c0             	movzbw %al,%ax
+    846f:	25 88 00             	and    $0x88,%ax
+    8472:	00 00                	add    %al,(%bx,%si)
+    8474:	83 f8 08             	cmp    $0x8,%ax
+    8477:	75 e6                	jne    845f <read_disk+0xd3>
 
 		// 读取并将数据写入到缓存中
 		for (int i = 0; i < SECTOR_SIZE / 2; i++) {
-    847d:	c7 45 f4 00 00       	movw   $0x0,-0xc(%di)
-    8482:	00 00                	add    %al,(%bx,%si)
-    8484:	eb 1d                	jmp    84a3 <read_disk+0x113>
+    8479:	c7 45 f4 00 00       	movw   $0x0,-0xc(%di)
+    847e:	00 00                	add    %al,(%bx,%si)
+    8480:	eb 1d                	jmp    849f <read_disk+0x113>
 			*data_buf++ = inw(0x1F0);
-    8486:	8b 5d f8             	mov    -0x8(%di),%bx
-    8489:	8d 43 02             	lea    0x2(%bp,%di),%ax
-    848c:	89 45 f8             	mov    %ax,-0x8(%di)
-    848f:	68 f0 01             	push   $0x1f0
-    8492:	00 00                	add    %al,(%bx,%si)
-    8494:	e8 d8 fe             	call   836f <outb+0x1d>
-    8497:	ff                   	(bad)
-    8498:	ff 83 c4 04          	incw   0x4c4(%bp,%di)
-    849c:	66 89 03             	mov    %eax,(%bp,%di)
+    8482:	8b 5d f8             	mov    -0x8(%di),%bx
+    8485:	8d 43 02             	lea    0x2(%bp,%di),%ax
+    8488:	89 45 f8             	mov    %ax,-0x8(%di)
+    848b:	68 f0 01             	push   $0x1f0
+    848e:	00 00                	add    %al,(%bx,%si)
+    8490:	e8 b9 fe             	call   834c <inb+0x1b>
+    8493:	ff                   	(bad)
+    8494:	ff 83 c4 04          	incw   0x4c4(%bp,%di)
+    8498:	66 89 03             	mov    %eax,(%bp,%di)
 		for (int i = 0; i < SECTOR_SIZE / 2; i++) {
-    849f:	83 45 f4 01          	addw   $0x1,-0xc(%di)
-    84a3:	81 7d f4 ff 00       	cmpw   $0xff,-0xc(%di)
-    84a8:	00 00                	add    %al,(%bx,%si)
-    84aa:	7e da                	jle    8486 <read_disk+0xf6>
+    849b:	83 45 f4 01          	addw   $0x1,-0xc(%di)
+    849f:	81 7d f4 ff 00       	cmpw   $0xff,-0xc(%di)
+    84a4:	00 00                	add    %al,(%bx,%si)
+    84a6:	7e da                	jle    8482 <read_disk+0xf6>
 	while (sector_count-- > 0) {
-    84ac:	8b 45 0c             	mov    0xc(%di),%ax
-    84af:	8d 50 ff             	lea    -0x1(%bx,%si),%dx
-    84b2:	89 55 0c             	mov    %dx,0xc(%di)
-    84b5:	85 c0                	test   %ax,%ax
-    84b7:	7f a9                	jg     8462 <read_disk+0xd2>
+    84a8:	8b 45 0c             	mov    0xc(%di),%ax
+    84ab:	8d 50 ff             	lea    -0x1(%bx,%si),%dx
+    84ae:	89 55 0c             	mov    %dx,0xc(%di)
+    84b1:	85 c0                	test   %ax,%ax
+    84b3:	7f a9                	jg     845e <read_disk+0xd2>
 		}
 	}
 }
-    84b9:	90                   	nop
-    84ba:	90                   	nop
-    84bb:	8b 5d fc             	mov    -0x4(%di),%bx
-    84be:	c9                   	leave
-    84bf:	c3                   	ret
+    84b5:	90                   	nop
+    84b6:	90                   	nop
+    84b7:	8b 5d fc             	mov    -0x4(%di),%bx
+    84ba:	c9                   	leave
+    84bb:	c3                   	ret
 
-000084c0 <reload_elf_file>:
+000084bc <reload_elf_file>:
+ * 解析elf文件，提取内容到相应的内存中
+ * https://wiki.osdev.org/ELF
+ * @param file_buffer
+ * @return
+ */
+static uint32_t reload_elf_file (uint8_t * file_buffer) {
+    84bc:	55                   	push   %bp
+    84bd:	89 e5                	mov    %sp,%bp
+    84bf:	83 ec 20             	sub    $0x20,%sp
+    // 读取的只是ELF文件，不像BIN那样可直接运行，需要从中加载出有效数据和代码
+    // 简单判断是否是合法的ELF文件
+    Elf32_Ehdr * elf_hdr = (Elf32_Ehdr *)file_buffer;
+    84c2:	8b 45 08             	mov    0x8(%di),%ax
+    84c5:	89 45 e8             	mov    %ax,-0x18(%di)
+    if ((elf_hdr->e_ident[0] != ELF_MAGIC) || (elf_hdr->e_ident[1] != 'E')
+    84c8:	8b 45 e8             	mov    -0x18(%di),%ax
+    84cb:	0f b6 00             	movzbw (%bx,%si),%ax
+    84ce:	3c 7f                	cmp    $0x7f,%al
+    84d0:	75 21                	jne    84f3 <reload_elf_file+0x37>
+    84d2:	8b 45 e8             	mov    -0x18(%di),%ax
+    84d5:	0f b6 40 01          	movzbw 0x1(%bx,%si),%ax
+    84d9:	3c 45                	cmp    $0x45,%al
+    84db:	75 16                	jne    84f3 <reload_elf_file+0x37>
+        || (elf_hdr->e_ident[2] != 'L') || (elf_hdr->e_ident[3] != 'F')) {
+    84dd:	8b 45 e8             	mov    -0x18(%di),%ax
+    84e0:	0f b6 40 02          	movzbw 0x2(%bx,%si),%ax
+    84e4:	3c 4c                	cmp    $0x4c,%al
+    84e6:	75 0b                	jne    84f3 <reload_elf_file+0x37>
+    84e8:	8b 45 e8             	mov    -0x18(%di),%ax
+    84eb:	0f b6 40 03          	movzbw 0x3(%bx,%si),%ax
+    84ef:	3c 46                	cmp    $0x46,%al
+    84f1:	74 0a                	je     84fd <reload_elf_file+0x41>
+        return 0;
+    84f3:	b8 00 00             	mov    $0x0,%ax
+    84f6:	00 00                	add    %al,(%bx,%si)
+    84f8:	e9 d7 00             	jmp    85d2 <reload_elf_file+0x116>
+    84fb:	00 00                	add    %al,(%bx,%si)
+    }
 
-static uint32_t reload_elf_file (uint8_t* file_buffer) {
-    84c0:	55                   	push   %bp
-    84c1:	89 e5                	mov    %sp,%bp
-    84c3:	83 ec 20             	sub    $0x20,%sp
-	Elf32_Ehdr * elf_hdr= (Elf32_Ehdr *) file_buffer;
-    84c6:	8b 45 08             	mov    0x8(%di),%ax
-    84c9:	89 45 e8             	mov    %ax,-0x18(%di)
-	if (elf_hdr->e_ident[0] != 0x7F
-    84cc:	8b 45 e8             	mov    -0x18(%di),%ax
-    84cf:	0f b6 00             	movzbw (%bx,%si),%ax
-    84d2:	3c 7f                	cmp    $0x7f,%al
-    84d4:	75 21                	jne    84f7 <reload_elf_file+0x37>
-	  || elf_hdr->e_ident[1] != 'E'
-    84d6:	8b 45 e8             	mov    -0x18(%di),%ax
-    84d9:	0f b6 40 01          	movzbw 0x1(%bx,%si),%ax
-    84dd:	3c 45                	cmp    $0x45,%al
-    84df:	75 16                	jne    84f7 <reload_elf_file+0x37>
-	  || elf_hdr->e_ident[2] != 'L'
-    84e1:	8b 45 e8             	mov    -0x18(%di),%ax
-    84e4:	0f b6 40 02          	movzbw 0x2(%bx,%si),%ax
-    84e8:	3c 4c                	cmp    $0x4c,%al
-    84ea:	75 0b                	jne    84f7 <reload_elf_file+0x37>
-	  || elf_hdr->e_ident[3] != 'F') {
-    84ec:	8b 45 e8             	mov    -0x18(%di),%ax
-    84ef:	0f b6 40 03          	movzbw 0x3(%bx,%si),%ax
-    84f3:	3c 46                	cmp    $0x46,%al
-    84f5:	74 0a                	je     8501 <reload_elf_file+0x41>
-		return 0;
-    84f7:	b8 00 00             	mov    $0x0,%ax
-    84fa:	00 00                	add    %al,(%bx,%si)
-    84fc:	e9 d7 00             	jmp    85d6 <reload_elf_file+0x116>
-    84ff:	00 00                	add    %al,(%bx,%si)
-	}
+    // 然后从中加载程序头，将内容拷贝到相应的位置
+    for (int i = 0; i < elf_hdr->e_phnum; i++) {
+    84fd:	c7 45 fc 00 00       	movw   $0x0,-0x4(%di)
+    8502:	00 00                	add    %al,(%bx,%si)
+    8504:	e9 b2 00             	jmp    85b9 <reload_elf_file+0xfd>
+    8507:	00 00                	add    %al,(%bx,%si)
+        Elf32_Phdr * phdr = (Elf32_Phdr *)(file_buffer + elf_hdr->e_phoff) + i;
+    8509:	8b 45 e8             	mov    -0x18(%di),%ax
+    850c:	8b 40 1c             	mov    0x1c(%bx,%si),%ax
+    850f:	8b 55 fc             	mov    -0x4(%di),%dx
+    8512:	c1 e2 05             	shl    $0x5,%dx
+    8515:	01 c2                	add    %ax,%dx
+    8517:	8b 45 08             	mov    0x8(%di),%ax
+    851a:	01 d0                	add    %dx,%ax
+    851c:	89 45 e4             	mov    %ax,-0x1c(%di)
+        if (phdr->p_type != PT_LOAD) {
+    851f:	8b 45 e4             	mov    -0x1c(%di),%ax
+    8522:	8b 00                	mov    (%bx,%si),%ax
+    8524:	83 f8 01             	cmp    $0x1,%ax
+    8527:	0f 85 89 00          	jne    85b4 <reload_elf_file+0xf8>
+    852b:	00 00                	add    %al,(%bx,%si)
+            continue;
+        }
 
-	for (int i = 0; i < elf_hdr->e_phnum; ++i) {
-    8501:	c7 45 fc 00 00       	movw   $0x0,-0x4(%di)
-    8506:	00 00                	add    %al,(%bx,%si)
-    8508:	e9 b2 00             	jmp    85bd <reload_elf_file+0xfd>
-    850b:	00 00                	add    %al,(%bx,%si)
-		Elf32_Phdr * phdr = (Elf32_Phdr *)(file_buffer + elf_hdr->e_phoff) + i;
-    850d:	8b 45 e8             	mov    -0x18(%di),%ax
-    8510:	8b 40 1c             	mov    0x1c(%bx,%si),%ax
-    8513:	8b 55 fc             	mov    -0x4(%di),%dx
-    8516:	c1 e2 05             	shl    $0x5,%dx
-    8519:	01 c2                	add    %ax,%dx
-    851b:	8b 45 08             	mov    0x8(%di),%ax
-    851e:	01 d0                	add    %dx,%ax
-    8520:	89 45 e4             	mov    %ax,-0x1c(%di)
-		if (phdr->p_type != PT_LOAD) {
-    8523:	8b 45 e4             	mov    -0x1c(%di),%ax
-    8526:	8b 00                	mov    (%bx,%si),%ax
-    8528:	83 f8 01             	cmp    $0x1,%ax
-    852b:	0f 85 89 00          	jne    85b8 <reload_elf_file+0xf8>
-    852f:	00 00                	add    %al,(%bx,%si)
-			continue;
+		// 全部使用物理地址，此时分页机制还未打开
+        uint8_t * src = file_buffer + phdr->p_offset;
+    852d:	8b 45 e4             	mov    -0x1c(%di),%ax
+    8530:	8b 50 04             	mov    0x4(%bx,%si),%dx
+    8533:	8b 45 08             	mov    0x8(%di),%ax
+    8536:	01 d0                	add    %dx,%ax
+    8538:	89 45 f8             	mov    %ax,-0x8(%di)
+        uint8_t * dest = (uint8_t *)phdr->p_paddr;
+    853b:	8b 45 e4             	mov    -0x1c(%di),%ax
+    853e:	8b 40 0c             	mov    0xc(%bx,%si),%ax
+    8541:	89 45 f4             	mov    %ax,-0xc(%di)
+        for (int j = 0; j < phdr->p_filesz; j++) {
+    8544:	c7 45 f0 00 00       	movw   $0x0,-0x10(%di)
+    8549:	00 00                	add    %al,(%bx,%si)
+    854b:	eb 1b                	jmp    8568 <reload_elf_file+0xac>
+            *dest++ = *src++;
+    854d:	8b 55 f8             	mov    -0x8(%di),%dx
+    8550:	8d 42 01             	lea    0x1(%bp,%si),%ax
+    8553:	89 45 f8             	mov    %ax,-0x8(%di)
+    8556:	8b 45 f4             	mov    -0xc(%di),%ax
+    8559:	8d 48 01             	lea    0x1(%bx,%si),%cx
+    855c:	89 4d f4             	mov    %cx,-0xc(%di)
+    855f:	0f b6 12             	movzbw (%bp,%si),%dx
+    8562:	88 10                	mov    %dl,(%bx,%si)
+        for (int j = 0; j < phdr->p_filesz; j++) {
+    8564:	83 45 f0 01          	addw   $0x1,-0x10(%di)
+    8568:	8b 45 e4             	mov    -0x1c(%di),%ax
+    856b:	8b 40 10             	mov    0x10(%bx,%si),%ax
+    856e:	8b 55 f0             	mov    -0x10(%di),%dx
+    8571:	39 c2                	cmp    %ax,%dx
+    8573:	72 d8                	jb     854d <reload_elf_file+0x91>
+        }
+
+		// memsz和filesz不同时，后续要填0
+		dest= (uint8_t *)phdr->p_paddr + phdr->p_filesz;
+    8575:	8b 45 e4             	mov    -0x1c(%di),%ax
+    8578:	8b 50 10             	mov    0x10(%bx,%si),%dx
+    857b:	8b 45 e4             	mov    -0x1c(%di),%ax
+    857e:	8b 40 0c             	mov    0xc(%bx,%si),%ax
+    8581:	01 d0                	add    %dx,%ax
+    8583:	89 45 f4             	mov    %ax,-0xc(%di)
+		for (int j = 0; j < phdr->p_memsz - phdr->p_filesz; j++) {
+    8586:	c7 45 ec 00 00       	movw   $0x0,-0x14(%di)
+    858b:	00 00                	add    %al,(%bx,%si)
+    858d:	eb 10                	jmp    859f <reload_elf_file+0xe3>
+			*dest++ = 0;
+    858f:	8b 45 f4             	mov    -0xc(%di),%ax
+    8592:	8d 50 01             	lea    0x1(%bx,%si),%dx
+    8595:	89 55 f4             	mov    %dx,-0xc(%di)
+    8598:	c6 00 00             	movb   $0x0,(%bx,%si)
+		for (int j = 0; j < phdr->p_memsz - phdr->p_filesz; j++) {
+    859b:	83 45 ec 01          	addw   $0x1,-0x14(%di)
+    859f:	8b 45 e4             	mov    -0x1c(%di),%ax
+    85a2:	8b 50 14             	mov    0x14(%bx,%si),%dx
+    85a5:	8b 45 e4             	mov    -0x1c(%di),%ax
+    85a8:	8b 40 10             	mov    0x10(%bx,%si),%ax
+    85ab:	29 c2                	sub    %ax,%dx
+    85ad:	8b 45 ec             	mov    -0x14(%di),%ax
+    85b0:	39 d0                	cmp    %dx,%ax
+    85b2:	72 db                	jb     858f <reload_elf_file+0xd3>
+    85b4:	eb 01                	jmp    85b7 <reload_elf_file+0xfb>
+            continue;
+    85b6:	90                   	nop
+    for (int i = 0; i < elf_hdr->e_phnum; i++) {
+    85b7:	83 45 fc 01          	addw   $0x1,-0x4(%di)
+    85bb:	8b 45 e8             	mov    -0x18(%di),%ax
+    85be:	0f b7 40 2c          	movzww 0x2c(%bx,%si),%ax
+    85c2:	0f b7 c0             	movzww %ax,%ax
+    85c5:	39 45 fc             	cmp    %ax,-0x4(%di)
+    85c8:	0f 8c 3b ff          	jl     8507 <reload_elf_file+0x4b>
+    85cc:	ff                   	(bad)
+    85cd:	ff 8b 45 e8          	decw   -0x17bb(%bp,%di)
 		}
-		uint8_t * src = file_buffer + phdr->p_offset;
-    8531:	8b 45 e4             	mov    -0x1c(%di),%ax
-    8534:	8b 50 04             	mov    0x4(%bx,%si),%dx
-    8537:	8b 45 08             	mov    0x8(%di),%ax
-    853a:	01 d0                	add    %dx,%ax
-    853c:	89 45 f8             	mov    %ax,-0x8(%di)
-		uint8_t * dest = (uint8_t *) phdr->p_paddr;
-    853f:	8b 45 e4             	mov    -0x1c(%di),%ax
-    8542:	8b 40 0c             	mov    0xc(%bx,%si),%ax
-    8545:	89 45 f4             	mov    %ax,-0xc(%di)
-		for (int j = 0; j < phdr->p_filesz; ++j) {
-    8548:	c7 45 f0 00 00       	movw   $0x0,-0x10(%di)
-    854d:	00 00                	add    %al,(%bx,%si)
-    854f:	eb 1b                	jmp    856c <reload_elf_file+0xac>
-			*dest++ = *src++;
-    8551:	8b 55 f8             	mov    -0x8(%di),%dx
-    8554:	8d 42 01             	lea    0x1(%bp,%si),%ax
-    8557:	89 45 f8             	mov    %ax,-0x8(%di)
-    855a:	8b 45 f4             	mov    -0xc(%di),%ax
-    855d:	8d 48 01             	lea    0x1(%bx,%si),%cx
-    8560:	89 4d f4             	mov    %cx,-0xc(%di)
-    8563:	0f b6 12             	movzbw (%bp,%si),%dx
-    8566:	88 10                	mov    %dl,(%bx,%si)
-		for (int j = 0; j < phdr->p_filesz; ++j) {
-    8568:	83 45 f0 01          	addw   $0x1,-0x10(%di)
-    856c:	8b 45 e4             	mov    -0x1c(%di),%ax
-    856f:	8b 40 10             	mov    0x10(%bx,%si),%ax
-    8572:	8b 55 f0             	mov    -0x10(%di),%dx
-    8575:	39 c2                	cmp    %ax,%dx
-    8577:	72 d8                	jb     8551 <reload_elf_file+0x91>
-		}
-		dest = (uint8_t*) phdr->p_paddr + phdr->p_filesz;
-    8579:	8b 45 e4             	mov    -0x1c(%di),%ax
-    857c:	8b 50 10             	mov    0x10(%bx,%si),%dx
-    857f:	8b 45 e4             	mov    -0x1c(%di),%ax
-    8582:	8b 40 0c             	mov    0xc(%bx,%si),%ax
-    8585:	01 d0                	add    %dx,%ax
-    8587:	89 45 f4             	mov    %ax,-0xc(%di)
-		for (int j = 0; j < phdr->p_memsz - phdr->p_filesz; ++j) {
-    858a:	c7 45 ec 00 00       	movw   $0x0,-0x14(%di)
-    858f:	00 00                	add    %al,(%bx,%si)
-    8591:	eb 10                	jmp    85a3 <reload_elf_file+0xe3>
-			*dest++ = 0; 
-    8593:	8b 45 f4             	mov    -0xc(%di),%ax
-    8596:	8d 50 01             	lea    0x1(%bx,%si),%dx
-    8599:	89 55 f4             	mov    %dx,-0xc(%di)
-    859c:	c6 00 00             	movb   $0x0,(%bx,%si)
-		for (int j = 0; j < phdr->p_memsz - phdr->p_filesz; ++j) {
-    859f:	83 45 ec 01          	addw   $0x1,-0x14(%di)
-    85a3:	8b 45 e4             	mov    -0x1c(%di),%ax
-    85a6:	8b 50 14             	mov    0x14(%bx,%si),%dx
-    85a9:	8b 45 e4             	mov    -0x1c(%di),%ax
-    85ac:	8b 40 10             	mov    0x10(%bx,%si),%ax
-    85af:	29 c2                	sub    %ax,%dx
-    85b1:	8b 45 ec             	mov    -0x14(%di),%ax
-    85b4:	39 d0                	cmp    %dx,%ax
-    85b6:	72 db                	jb     8593 <reload_elf_file+0xd3>
-    85b8:	eb 01                	jmp    85bb <reload_elf_file+0xfb>
-			continue;
-    85ba:	90                   	nop
-	for (int i = 0; i < elf_hdr->e_phnum; ++i) {
-    85bb:	83 45 fc 01          	addw   $0x1,-0x4(%di)
-    85bf:	8b 45 e8             	mov    -0x18(%di),%ax
-    85c2:	0f b7 40 2c          	movzww 0x2c(%bx,%si),%ax
-    85c6:	0f b7 c0             	movzww %ax,%ax
-    85c9:	39 45 fc             	cmp    %ax,-0x4(%di)
-    85cc:	0f 8c 3b ff          	jl     850b <reload_elf_file+0x4b>
-    85d0:	ff                   	(bad)
-    85d1:	ff 8b 45 e8          	decw   -0x17bb(%bp,%di)
-		}
-	}
-	return elf_hdr->e_entry;
-    85d5:	8b 40 18             	mov    0x18(%bx,%si),%ax
-} 
-    85d8:	c9                   	leave
-    85d9:	c3                   	ret
+    }
 
-000085da <die>:
-
-static void die () {
-    85da:	55                   	push   %bp
-    85db:	89 e5                	mov    %sp,%bp
-	for (;;) {}
-    85dd:	eb fe                	jmp    85dd <die+0x3>
-
-000085df <load_kernel>:
+    return elf_hdr->e_entry;
+    85d1:	8b 40 18             	mov    0x18(%bx,%si),%ax
 }
-void load_kernel () {
-    85df:	55                   	push   %bp
-    85e0:	89 e5                	mov    %sp,%bp
-    85e2:	83 ec 18             	sub    $0x18,%sp
-    read_disk(100, 500, (uint8_t*) SYS_KERNEL_LOAD_ADDR);
-    85e5:	68 00 00             	push   $0x0
-    85e8:	10 00                	adc    %al,(%bx,%si)
-    85ea:	68 f4 01             	push   $0x1f4
-    85ed:	00 00                	add    %al,(%bx,%si)
-    85ef:	6a 64                	push   $0x64
-    85f1:	e8 9a fd             	call   838e <inw+0x1d>
-    85f4:	ff                   	(bad)
-    85f5:	ff 83 c4 0c          	incw   0xcc4(%bp,%di)
-	uint32_t kernel_entry = reload_elf_file((uint8_t*) SYS_KERNEL_LOAD_ADDR);
-    85f9:	68 00 00             	push   $0x0
-    85fc:	10 00                	adc    %al,(%bx,%si)
-    85fe:	e8 bd fe             	call   84be <read_disk+0x12e>
-    8601:	ff                   	(bad)
-    8602:	ff 83 c4 04          	incw   0x4c4(%bp,%di)
-    8606:	89 45 f4             	mov    %ax,-0xc(%di)
-    if (kernel_entry == 0) {
-    8609:	83 7d f4 00          	cmpw   $0x0,-0xc(%di)
-    860d:	75 0a                	jne    8619 <load_kernel+0x3a>
+    85d4:	c9                   	leave
+    85d5:	c3                   	ret
+
+000085d6 <die>:
+
+/**
+ * 死机
+ */
+static void die (int code) {
+    85d6:	55                   	push   %bp
+    85d7:	89 e5                	mov    %sp,%bp
+    for (;;) {}
+    85d9:	eb fe                	jmp    85d9 <die+0x3>
+
+000085db <load_kernel>:
+}
+
+/**
+ * 从磁盘上加载内核
+ */
+void load_kernel(void) {
+    85db:	55                   	push   %bp
+    85dc:	89 e5                	mov    %sp,%bp
+    85de:	83 ec 18             	sub    $0x18,%sp
+    // 读取的扇区数一定要大一些，保不准kernel.elf大小会变得很大
+    // 我就吃过亏，只读了100个扇区，结果运行后发现kernel的一些初始化的变量值为空，程序也会跑飞
+    read_disk(100, 500, (uint8_t *)SYS_KERNEL_LOAD_ADDR);
+    85e1:	68 00 00             	push   $0x0
+    85e4:	10 00                	adc    %al,(%bx,%si)
+    85e6:	68 f4 01             	push   $0x1f4
+    85e9:	00 00                	add    %al,(%bx,%si)
+    85eb:	6a 64                	push   $0x64
+    85ed:	e8 9a fd             	call   838a <outb+0x1d>
+    85f0:	ff                   	(bad)
+    85f1:	ff 83 c4 0c          	incw   0xcc4(%bp,%di)
+
+     // 解析ELF文件，并通过调用的方式，进入到内核中去执行，同时传递boot参数
+	 // 临时将elf文件先读到SYS_KERNEL_LOAD_ADDR处，再进行解析
+    uint32_t kernel_entry = reload_elf_file((uint8_t *)SYS_KERNEL_LOAD_ADDR);
+    85f5:	68 00 00             	push   $0x0
+    85f8:	10 00                	adc    %al,(%bx,%si)
+    85fa:	e8 bd fe             	call   84ba <read_disk+0x12e>
+    85fd:	ff                   	(bad)
+    85fe:	ff 83 c4 04          	incw   0x4c4(%bp,%di)
+    8602:	89 45 f4             	mov    %ax,-0xc(%di)
+	if (kernel_entry == 0) {
+    8605:	83 7d f4 00          	cmpw   $0x0,-0xc(%di)
+    8609:	75 0a                	jne    8615 <load_kernel+0x3a>
 		die(-1);
-    860f:	6a ff                	push   $0xffff
-    8611:	e8 c4 ff             	call   85d8 <reload_elf_file+0x118>
-    8614:	ff                   	(bad)
-    8615:	ff 83 c4 04          	incw   0x4c4(%bp,%di)
+    860b:	6a ff                	push   $0xffff
+    860d:	e8 c4 ff             	call   85d4 <reload_elf_file+0x118>
+    8610:	ff                   	(bad)
+    8611:	ff 83 c4 04          	incw   0x4c4(%bp,%di)
 	}
-	((void (*)(boot_info_t *))kernel_entry)(&boot_info);
-    8619:	8b 45 f4             	mov    -0xc(%di),%ax
-    861c:	83 ec 0c             	sub    $0xc,%sp
-    861f:	68 80 96             	push   $0x9680
-    8622:	00 00                	add    %al,(%bx,%si)
-    8624:	ff d0                	call   *%ax
-    8626:	83 c4 10             	add    $0x10,%sp
-    for(;;) {
-    8629:	eb fe                	jmp    8629 <load_kernel+0x4a>
+
+    ((void (*)(boot_info_t *))kernel_entry)(&boot_info);
+    8615:	8b 45 f4             	mov    -0xc(%di),%ax
+    8618:	83 ec 0c             	sub    $0xc,%sp
+    861b:	68 80 96             	push   $0x9680
+    861e:	00 00                	add    %al,(%bx,%si)
+    8620:	ff d0                	call   *%ax
+    8622:	83 c4 10             	add    $0x10,%sp
+    for (;;) {}
+    8625:	eb fe                	jmp    8625 <load_kernel+0x4a>

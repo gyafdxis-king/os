@@ -1,6 +1,16 @@
-#ifndef ELF_H
-#define ELF_H
+/**
+ * ELF相关头文件及配置
+ *
+ * 创建时间：2021年8月5日
+ * 作者：李述铜
+ * 联系邮箱: 527676163@qq.com
+ */
+#ifndef OS_ELF_H
+#define OS_ELF_H
 
+#include "types.h"
+
+// ELF相关数据类型
 typedef uint32_t Elf32_Addr;
 typedef uint16_t Elf32_Half;
 typedef uint32_t Elf32_Off;
@@ -45,4 +55,4 @@ typedef struct {
 
 #pragma pack()
 
-#endif
+#endif //OS_ELF_H

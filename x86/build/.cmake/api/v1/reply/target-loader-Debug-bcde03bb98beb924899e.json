@@ -26,7 +26,7 @@
 			{
 				"command" : 0,
 				"file" : 0,
-				"line" : 11,
+				"line" : 10,
 				"parent" : 0
 			},
 			{
@@ -53,11 +53,11 @@
 			[
 				{
 					"backtrace" : 3,
-					"path" : "/Users/gaolisha/workspace/os/x86/source"
+					"path" : "/Users/gaolisha/workspace/diy-x86os-master/code/c05.03/source"
 				},
 				{
 					"backtrace" : 3,
-					"path" : "/Users/gaolisha/workspace/os/x86/source/kernel/include"
+					"path" : "/Users/gaolisha/workspace/diy-x86os-master/code/c05.03/source/kernel/include"
 				}
 			],
 			"language" : "ASM",
@@ -77,11 +77,11 @@
 			[
 				{
 					"backtrace" : 3,
-					"path" : "/Users/gaolisha/workspace/os/x86/source"
+					"path" : "/Users/gaolisha/workspace/diy-x86os-master/code/c05.03/source"
 				},
 				{
 					"backtrace" : 3,
-					"path" : "/Users/gaolisha/workspace/os/x86/source/kernel/include"
+					"path" : "/Users/gaolisha/workspace/diy-x86os-master/code/c05.03/source/kernel/include"
 				}
 			],
 			"language" : "C",
