@@ -36,6 +36,11 @@
 },
 {
   "directory": "/Users/gaolisha/workspace/os/x86/build",
+  "command": "/usr/local/bin/x86_64-elf-gcc -I/Users/gaolisha/workspace/os/x86/source -I/Users/gaolisha/workspace/os/x86/source/kernel/include -g -c -O0 -m32 -fno-pie -fno-stack-protector -fno-asynchronous-unwind-tables -g -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX11.1.sdk -o source/kernel/CMakeFiles/kernel.dir/cpu/irq.c.o -c /Users/gaolisha/workspace/os/x86/source/kernel/cpu/irq.c",
+  "file": "/Users/gaolisha/workspace/os/x86/source/kernel/cpu/irq.c"
+},
+{
+  "directory": "/Users/gaolisha/workspace/os/x86/build",
   "command": "/usr/local/bin/x86_64-elf-gcc -I/Users/gaolisha/workspace/os/x86/source -I/Users/gaolisha/workspace/os/x86/source/kernel/include -g -c -O0 -m32 -fno-pie -fno-stack-protector -fno-asynchronous-unwind-tables -g -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX11.1.sdk -o source/kernel/CMakeFiles/kernel.dir/init/init.c.o -c /Users/gaolisha/workspace/os/x86/source/kernel/init/init.c",
   "file": "/Users/gaolisha/workspace/os/x86/source/kernel/init/init.c"
 }

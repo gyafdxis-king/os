@@ -234,6 +234,13 @@ build source/kernel/CMakeFiles/kernel.dir/cpu/cpu.c.o: C_COMPILER__kernel_Debug 
   OBJECT_DIR = source/kernel/CMakeFiles/kernel.dir
   OBJECT_FILE_DIR = source/kernel/CMakeFiles/kernel.dir/cpu
 
+build source/kernel/CMakeFiles/kernel.dir/cpu/irq.c.o: C_COMPILER__kernel_Debug /Users/gaolisha/workspace/os/x86/source/kernel/cpu/irq.c || cmake_object_order_depends_target_kernel
+  DEP_FILE = source/kernel/CMakeFiles/kernel.dir/cpu/irq.c.o.d
+  FLAGS = -g -c -O0 -m32 -fno-pie -fno-stack-protector -fno-asynchronous-unwind-tables -g -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX11.1.sdk
+  INCLUDES = -I/Users/gaolisha/workspace/os/x86/source -I/Users/gaolisha/workspace/os/x86/source/kernel/include
+  OBJECT_DIR = source/kernel/CMakeFiles/kernel.dir
+  OBJECT_FILE_DIR = source/kernel/CMakeFiles/kernel.dir/cpu
+
 build source/kernel/CMakeFiles/kernel.dir/init/init.c.o: C_COMPILER__kernel_Debug /Users/gaolisha/workspace/os/x86/source/kernel/init/init.c || cmake_object_order_depends_target_kernel
   DEP_FILE = source/kernel/CMakeFiles/kernel.dir/init/init.c.o.d
   FLAGS = -g -c -O0 -m32 -fno-pie -fno-stack-protector -fno-asynchronous-unwind-tables -g -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX11.1.sdk
@@ -249,7 +256,7 @@ build source/kernel/CMakeFiles/kernel.dir/init/init.c.o: C_COMPILER__kernel_Debu
 #############################################
 # Link the executable source/kernel/kernel
 
-build source/kernel/kernel: C_EXECUTABLE_LINKER__kernel_Debug source/kernel/CMakeFiles/kernel.dir/init/start.S.o source/kernel/CMakeFiles/kernel.dir/cpu/cpu.c.o source/kernel/CMakeFiles/kernel.dir/init/init.c.o
+build source/kernel/kernel: C_EXECUTABLE_LINKER__kernel_Debug source/kernel/CMakeFiles/kernel.dir/init/start.S.o source/kernel/CMakeFiles/kernel.dir/cpu/cpu.c.o source/kernel/CMakeFiles/kernel.dir/cpu/irq.c.o source/kernel/CMakeFiles/kernel.dir/init/init.c.o
   FLAGS = -g -c -O0 -m32 -fno-pie -fno-stack-protector -fno-asynchronous-unwind-tables -g -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX11.1.sdk
   LINK_FLAGS = -m elf_i386 -T /Users/gaolisha/workspace/os/x86/source/kernel/kernel.lds
   OBJECT_DIR = source/kernel/CMakeFiles/kernel.dir

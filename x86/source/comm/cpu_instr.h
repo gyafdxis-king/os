@@ -41,6 +41,20 @@ static inline void lgdt(uint32_t start, uint32_t size) {
 	__asm__ __volatile__("lgdt %[g]"::[g]"m"(gdt));
 }
 
+static inline void lidt(uint32_t start, uint32_t size) {
+	struct {
+		uint16_t limit;
+		uint16_t start15_0;
+		uint16_t start31_16;
+	} idt;
+
+	idt.start31_16 = start >> 16;
+	idt.start15_0 = start & 0xFFFF;
+	idt.limit = size - 1;
+
+	__asm__ __volatile__("lidt %[g]"::[g]"m"(idt));
+}
+
 static inline uint32_t read_cr0() {
 	uint32_t cr0;
 	__asm__ __volatile__("mov %%cr0, %[v]":[v]"=r"(cr0));

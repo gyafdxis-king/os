@@ -88,7 +88,8 @@
 			"sourceIndexes" : 
 			[
 				1,
-				4
+				2,
+				6
 			]
 		}
 	],
@@ -129,16 +130,18 @@
 			"sourceIndexes" : 
 			[
 				1,
-				4
+				2,
+				6
 			]
 		},
 		{
 			"name" : "Header Files",
 			"sourceIndexes" : 
 			[
-				2,
 				3,
-				5
+				4,
+				5,
+				7
 			]
 		}
 	],
@@ -158,7 +161,18 @@
 		},
 		{
 			"backtrace" : 1,
+			"compileGroupIndex" : 1,
+			"path" : "source/kernel/cpu/irq.c",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 1,
 			"path" : "source/kernel/include/cpu/cpu.h",
+			"sourceGroupIndex" : 2
+		},
+		{
+			"backtrace" : 1,
+			"path" : "source/kernel/include/cpu/irq.h",
 			"sourceGroupIndex" : 2
 		},
 		{

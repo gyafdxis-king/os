@@ -42,3 +42,24 @@ gdt_reload:
 	.bss
 .comm stack, KERNEL_STACK_SIZE    // comm 声明未初始化的通用内存区域，以字节计
 
+    .text
+    .extern do_handler_unknown
+    .global exception_handler_unknown
+exception_handler_unknown:
+    pusha
+    push %ds
+    push %es
+    push %fs
+    push %gs
+
+    call do_handler_unknown
+
+
+    pop %gs
+    pop %fs
+    pop %es
+    pop %ds
+    popa
+    
+    iret
+
